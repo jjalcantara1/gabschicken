@@ -1,15 +1,20 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { ButtonGroup, Button } from 'react-bootstrap';
 
 const MenuCategory = ({ categories, activeCategory, setActiveCategory }) => {
     return (
-        <Nav variant="tabs" activeKey={activeCategory} onSelect={(selectedKey) => setActiveCategory(selectedKey)}>
-            {categories.map((category, index) => (
-                <Nav.Item key={index}>
-                    <Nav.Link eventKey={category}>{category}</Nav.Link>
-                </Nav.Item>
+        <ButtonGroup className="d-flex justify-content-center">
+            {categories.map(category => (
+                <Button
+                    key={category}
+                    variant={category === activeCategory ? 'dark' : 'outline-dark'}
+                    onClick={() => setActiveCategory(category)}
+                    className="mx-2"
+                >
+                    {category}
+                </Button>
             ))}
-        </Nav>
+        </ButtonGroup>
     );
 };
 
