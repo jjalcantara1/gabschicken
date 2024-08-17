@@ -4,6 +4,7 @@ import Home from './screens/Home';
 import Menu from './screens/Menu';
 import Contact from './screens/Contact';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
