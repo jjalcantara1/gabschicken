@@ -222,6 +222,8 @@ const Menu = () => {
     
 
     return (
+        <><Header />
+        
         <div style={styles.pageContainer}>
             <Container>
                 <Form.Control
@@ -232,8 +234,7 @@ const Menu = () => {
                         paddingLeft: '40px', // Adjust this value to increase or decrease the spacing
                     }}
                     value={searchTerm}
-                    onChange={handleSearchChange}
-                />
+                    onChange={handleSearchChange} />
 
                 {isMobile ? (
                     <Dropdown>
@@ -280,8 +281,7 @@ const Menu = () => {
                                             className="d-block w-100"
                                             src={item.image}
                                             alt={item.title}
-                                            style={styles.carouselImage} /* Apply styles to ensure uniform image size */
-                                        />
+                                            style={styles.carouselImage} /* Apply styles to ensure uniform image size */ />
                                         <Carousel.Caption>
                                             <h3>{item.title}</h3>
                                             <p>{item.description}</p>
@@ -303,8 +303,7 @@ const Menu = () => {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    style={styles.menuItemImage}
-                                />
+                                    style={styles.menuItemImage} />
                                 <h4 style={styles.menuItemTitle}>{item.title}</h4>
                                 <p style={styles.menuItemDescription}>{item.description}</p>
                                 <p style={styles.menuItemPrice}>{item.price}</p>
@@ -322,8 +321,7 @@ const Menu = () => {
                             <img
                                 src={selectedItem.image}
                                 alt={selectedItem.title}
-                                style={styles.popupImage}
-                            />
+                                style={styles.popupImage} />
                             <h2 style={styles.popupTitle}>{selectedItem.title}</h2>
                             <p style={styles.popupDescription}>{selectedItem.description}</p>
                             <p style={styles.popupPrice}>{selectedItem.price}</p>
@@ -331,7 +329,7 @@ const Menu = () => {
                     </div>
                 )}
             </Container>
-        </div>
+        </div></>
     );
 };
 

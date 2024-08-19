@@ -24,7 +24,7 @@ window.addEventListener('scroll', function() {
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
-            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66c23a64&is=66c0e8e4&hm=94a6ce4021f0e8a5500f45ae41ca866028b40202c54435b7385f8eeba13b2c10&'}
+            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66c434a4&is=66c2e324&hm=2910f5dbe92acef22f916a98369b350b247100b5ab52d682c6b884de823e9dda&'}
             height="50"
             className='d-inline-block align-top'
             alt="Logo"
