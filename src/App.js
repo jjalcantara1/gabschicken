@@ -5,6 +5,7 @@ import Menu from './screens/Menu';
 import Contact from './screens/Contact';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar } from 'react-bootstrap';
 
 function App() {
   return (

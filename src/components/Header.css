@@ -1,0 +1,103 @@
+#home{
+    margin: 0 4rem;
+    color: #FFBD59;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 2rem;
+}
+
+#home:hover{
+    background-color: #783F1D;
+    color: white;
+    border-width: 10rem !important;
+    border-radius: 2rem;
+}
+
+#menu{
+    margin: 0 5rem;
+    color: #FFBD59;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 2rem;
+}
+
+#menu:hover{
+    background-color: #783F1D;
+    color: white;
+    border-width: 10rem !important;
+    border-radius: 2rem;
+}
+
+#contactus{
+    margin: 0 2.9rem;
+    color: #FFBD59;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 2rem;
+}
+
+#contactus:hover{
+    background-color: #783F1D;
+    color: white;
+    border-width: 1rem !important;
+    border-radius: 2rem;
+}
+
+/* this is for the header line di ko nga lang matago pag naka small website tho remove this if di maayos pls */
+.navbar-nav .nav-link {
+    margin: 0 2rem;
+    color: #FFBD59;
+    position: relative;
+}
+
+
+.navbar-nav .nav-link:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -4.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1.5rem;
+    background-color: #FFBD59;
+}
+/* this is for the header line di ko nga lang matago pag naka small website tho */
+
+
+
+#navbar {
+    background-color: #0A5C36 !important;
+    height: 8rem fit-content;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+
+#navbar.scrolled {
+    background-color: #04371F !important;
+    height: 6rem fit-content; 
+    padding: 0.5rem 1rem; 
+    font-size: 1.2rem;
+}
+
+#navbar img {
+    height: 6.25rem;
+    transition: height 0.3s ease;
+    margin-right: -7.2rem;
+}
+
+#navbar.scrolled img {
+    height: 5.3rem;
+}
+
+
+

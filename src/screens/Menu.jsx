@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import MenuCategory from '../components/MenuCategory';
 import MenuItem from '../components/MenuItem';
+import Header from '../components/Header';
 
 import promo1 from '../img/promo1.png';
 import promo2 from '../img/promo2.png';
@@ -28,12 +29,12 @@ const Menu = () => {
         : [];
 
     return (
-        <Container>
-            <MenuCategory 
-                categories={categories} 
-                activeCategory={activeCategory} 
-                setActiveCategory={setActiveCategory} 
-            />
+        <><Header />
+            <Container>
+            <MenuCategory
+                categories={categories}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory} />
             {activeCategory === null ? (
                 <div className="carousel-container">
                     <Carousel className="custom-carousel mt-4">
@@ -41,22 +42,19 @@ const Menu = () => {
                             <img
                                 className="d-block w-100 custom-carousel-img"
                                 src={promo1}
-                                alt="First slide"
-                            />
+                                alt="First slide" />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 custom-carousel-img"
                                 src={promo2}
-                                alt="Second slide"
-                            />
+                                alt="Second slide" />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 custom-carousel-img"
                                 src={promo3}
-                                alt="Third slide"
-                            />
+                                alt="Third slide" />
                         </Carousel.Item>
                     </Carousel>
                 </div>
@@ -75,7 +73,7 @@ const Menu = () => {
                     )}
                 </Row>
             )}
-        </Container>
+        </Container></>
     );
 };
 
