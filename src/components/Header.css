@@ -10,7 +10,6 @@
 #home:hover{
     background-color: #783F1D;
     color: white;
-    border-width: 10rem !important;
     border-radius: 2rem;
 }
 
@@ -26,7 +25,6 @@
 #menu:hover{
     background-color: #783F1D;
     color: white;
-    border-width: 10rem !important;
     border-radius: 2rem;
 }
 
@@ -42,7 +40,6 @@
 #contactus:hover{
     background-color: #783F1D;
     color: white;
-    border-width: 1rem !important;
     border-radius: 2rem;
 }
 
@@ -64,6 +61,12 @@
     height: 1.5rem;
     background-color: #FFBD59;
 }
+
+@media (max-width: 991px) { 
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+}
 /* this is for the header line di ko nga lang matago pag naka small website tho */
 
 
@@ -79,6 +82,7 @@
     z-index: 1000;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
+    margin-bottom: 20rem;
 }
 
 

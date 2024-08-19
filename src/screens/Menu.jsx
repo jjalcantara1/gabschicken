@@ -48,7 +48,7 @@ const Menu = () => {
 
     const styles = {
         pageContainer: {
-            backgroundColor: '#004225',
+            backgroundColor: '0A5C36',
             padding: '30px 0',
             minHeight: '100vh',
             color: '#FFD54F',
