@@ -16,10 +16,31 @@ const Menu = () => {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const menuItems = [
+        { title: "A1", description: "Sisig Tokwa", price: "₱199", image: "", category: "Appetizer" },
+        { title: "A2", description: "Calamares", price: "₱229", image: "", category: "Appetizer" },
+        { title: "A3", description: "Pork Sisig", price: "₱299", image: "", category: "Appetizer" },
+        { title: "A4", description: "Lechon Kawali", price: "₱279", image: "", category: "Appetizer" },
+        { title: "A5", description: "Tokwa't Baboy", price: "₱319", image: "", category: "Appetizer" },
+        { title: "A6", description: "Stuffed Pusit", price: "Price vary on size", image: "", category: "Appetizer" },
+        { title: "G1", description: "Inasal Legs", price: "₱199", image: "", category: "Grilled" },
+        { title: "G2", description: "Inasal Pecho", price: "₱199", image: "", category: "Grilled" },
+        { title: "G3", description: "Pork Barbecue", price: "₱229", image: "", category: "Grilled" },
+        { title: "G4", description: "Pork Belly", price: "₱249", image: "", category: "Grilled" },
+        { title: "G5s", description: "Pork Spareribs", price: "₱279", image: "", category: "Grilled" },
+        { title: "G6", description: "T-Bone Steak", price: "₱289", image: "", category: "Grilled" },
+        { title: "G7", description: "Stuffed Pusit", price: "Price vary on size", image: "", category: "Grilled" },
+        { title: "F1", description: "Calamares", price: "₱188", image: "", category: "Fried" },
+        { title: "F2", description: "Breaded Pork Chop", price: "₱198", image: "", category: "Fried" },
+        { title: "F3", description: "Honey Glazed Chicken", price: "₱248", image: "", category: "Fried" },
+        { title: "F4", description: "Chicken Ala Gab", price: "₱258", image: "", category: "Fried" },
+        { title: "F5", description: "Chicken Cordon Bleu", price: "₱278", image: "", category: "Fried" },
+        { title: "C1", description: "Inasal & Pork Barbecue", price: "₱268", image: "", category: "Combo" },
+        { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: "", category: "Combo" },
+        { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: "", category: "Combo" },
+        { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: "", category: "Combo" },
         { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: "https://cdn.discordapp.com/attachments/752710332555722822/1274075950111526914/440096245_854456160029670_5983124491670944527_n.jpg?ex=66c197f1&is=66c04671&hm=e99ecfb416e440936ed4fedddc6f786d473d9edf422f59a3407cfe883985ac28&", category: "Promos" },
         { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: "https://cdn.discordapp.com/attachments/1216019980852658216/1274401912174805073/screenshot-1723911440391.png?ex=66c21ec5&is=66c0cd45&hm=1db7c3d8d3aa17fbb9189595b5bf0a7a7939274183bc55b7d77e60ce82d14454&", category: "Promos" },
         { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: "/path/to/image3.jpg", category: "Promos" },
-        { title: "Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: "/path/to/image3.jpg", category: "Fried" },
     ];
 
     const filteredItems = menuItems
