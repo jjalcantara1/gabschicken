@@ -38,7 +38,7 @@ const Menu = () => {
         { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: "", category: "Combo" },
         { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: "", category: "Combo" },
         { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: "", category: "Combo" },
-        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: "https://cdn.discordapp.com/attachments/752710332555722822/1274075950111526914/440096245_854456160029670_5983124491670944527_n.jpg?ex=66c197f1&is=66c04671&hm=e99ecfb416e440936ed4fedddc6f786d473d9edf422f59a3407cfe883985ac28&", category: "Promos" },
+        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo1 , category: "Promos" },
         { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: "https://cdn.discordapp.com/attachments/1216019980852658216/1274401912174805073/screenshot-1723911440391.png?ex=66c21ec5&is=66c0cd45&hm=1db7c3d8d3aa17fbb9189595b5bf0a7a7939274183bc55b7d77e60ce82d14454&", category: "Promos" },
         { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: "/path/to/image3.jpg", category: "Promos" },
     ];
