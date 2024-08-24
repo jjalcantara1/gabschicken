@@ -5,10 +5,40 @@ import MenuItem from '../components/MenuItem';
 import Header from '../components/Header';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import A1 from '../img/A1.jpg';
+import A2 from '../img/A2.jpg';
+import A3 from '../img/A3.jpg';
+import A4 from '../img/A4.jpg';
+import A5 from '../img/A5.jpg';
+import A6 from '../img/A6.jpg';
+import C1 from '../img/C1.jpg';
+import C2 from '../img/C2.jpg';
+import C3 from '../img/C3.jpg';
+import C4 from '../img/C4.jpg';
+import F1 from '../img/F1.jpg';
+import F2 from '../img/F2.jpg';
+import F3 from '../img/F3.jpg';
+import F4 from '../img/F4.jpg';
+import F5 from '../img/F5.jpg';
+import G1 from '../img/G1.jpg';
+import G2 from '../img/G2.jpg';
+import G3 from '../img/G3.jpg';
+import G4 from '../img/G4.jpg';
+import G5 from '../img/G5.jpg';
+import G6 from '../img/G6.jpg';
+import G7 from '../img/G7.jpg';
+import S1 from '../img/S1.jpg';
+import S2 from '../img/S2.jpg';
+import S3 from '../img/S3.jpg';
+import S4 from '../img/S4.jpg';
+import S5 from '../img/S5.jpg';
+import promo1 from '../img/promo1.png';
+import promo2 from '../img/promo2.png';
+import promo3 from '../img/promo3.png';
 
 
 const Menu = () => {
-    const categories = ["Appetizer", "Grilled", "Fried", "Combo", "Promos"];
+    const categories = ["Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos"];
     const [activeCategory, setActiveCategory] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,31 +46,36 @@ const Menu = () => {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const menuItems = [
-        { title: "A1", description: "Sisig Tokwa", price: "₱199", image: "", category: "Appetizer" },
-        { title: "A2", description: "Calamares", price: "₱229", image: "", category: "Appetizer" },
-        { title: "A3", description: "Pork Sisig", price: "₱299", image: "", category: "Appetizer" },
-        { title: "A4", description: "Lechon Kawali", price: "₱279", image: "", category: "Appetizer" },
-        { title: "A5", description: "Tokwa't Baboy", price: "₱319", image: "", category: "Appetizer" },
-        { title: "A6", description: "Stuffed Pusit", price: "Price vary on size", image: "", category: "Appetizer" },
-        { title: "G1", description: "Inasal Legs", price: "₱199", image: "", category: "Grilled" },
-        { title: "G2", description: "Inasal Pecho", price: "₱199", image: "", category: "Grilled" },
-        { title: "G3", description: "Pork Barbecue", price: "₱229", image: "", category: "Grilled" },
-        { title: "G4", description: "Pork Belly", price: "₱249", image: "", category: "Grilled" },
-        { title: "G5s", description: "Pork Spareribs", price: "₱279", image: "", category: "Grilled" },
-        { title: "G6", description: "T-Bone Steak", price: "₱289", image: "", category: "Grilled" },
-        { title: "G7", description: "Stuffed Pusit", price: "Price vary on size", image: "", category: "Grilled" },
-        { title: "F1", description: "Calamares", price: "₱188", image: "", category: "Fried" },
-        { title: "F2", description: "Breaded Pork Chop", price: "₱198", image: "", category: "Fried" },
-        { title: "F3", description: "Honey Glazed Chicken", price: "₱248", image: "", category: "Fried" },
-        { title: "F4", description: "Chicken Ala Gab", price: "₱258", image: "", category: "Fried" },
-        { title: "F5", description: "Chicken Cordon Bleu", price: "₱278", image: "", category: "Fried" },
-        { title: "C1", description: "Inasal & Pork Barbecue", price: "₱268", image: "", category: "Combo" },
-        { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: "", category: "Combo" },
-        { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: "", category: "Combo" },
-        { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: "", category: "Combo" },
-        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo1 , category: "Promos" },
-        { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: "https://cdn.discordapp.com/attachments/1216019980852658216/1274401912174805073/screenshot-1723911440391.png?ex=66c21ec5&is=66c0cd45&hm=1db7c3d8d3aa17fbb9189595b5bf0a7a7939274183bc55b7d77e60ce82d14454&", category: "Promos" },
-        { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: "/path/to/image3.jpg", category: "Promos" },
+        { title: "A1", description: "Sisig Tokwa", price: "₱199", image: A1, category: "Appetizer" },
+        { title: "A2", description: "Calamares", price: "₱229", image: A2, category: "Appetizer" },
+        { title: "A3", description: "Pork Sisig", price: "₱299", image: A3, category: "Appetizer" },
+        { title: "A4", description: "Lechon Kawali", price: "₱279", image: A4, category: "Appetizer" },
+        { title: "A5", description: "Tokwa't Baboy", price: "₱319", image: A5, category: "Appetizer" },
+        { title: "A6", description: "Stuffed Pusit", price: "Price vary on size", image: A6, category: "Appetizer" },
+        { title: "G1", description: "Inasal Legs", price: "₱199", image: G1, category: "Grilled" },
+        { title: "G2", description: "Inasal Pecho", price: "₱199", image: G2, category: "Grilled" },
+        { title: "G3", description: "Pork Barbecue", price: "₱229", image: G3, category: "Grilled" },
+        { title: "G4", description: "Pork Belly", price: "₱249", image: G4, category: "Grilled" },
+        { title: "G5", description: "Pork Spareribs", price: "₱279", image: G5, category: "Grilled" },
+        { title: "G6", description: "T-Bone Steak", price: "₱289", image: G6, category: "Grilled" },
+        { title: "G7", description: "Stuffed Pusit", price: "Price vary on size", image: G7, category: "Grilled" },
+        { title: "F1", description: "Calamares", price: "₱188", image: F1, category: "Fried" },
+        { title: "F2", description: "Breaded Pork Chop", price: "₱198", image: F2, category: "Fried" },
+        { title: "F3", description: "Honey Glazed Chicken", price: "₱248", image: F3, category: "Fried" },
+        { title: "F4", description: "Chicken Ala Gab", price: "₱258", image: F4, category: "Fried" },
+        { title: "F5", description: "Chicken Cordon Bleu", price: "₱278", image: F5, category: "Fried" },
+        { title: "C1", description: "Inasal & Pork Barbecue", price: "₱268", image: C1, category: "Combo" },
+        { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: C2, category: "Combo" },
+        { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: C3, category: "Combo" }, 
+        { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: C4, category: "Combo" },
+        { title: "S1", description: "Chopsuey", price: "₱248", image: S1, category: "Special" },
+        { title: "S2", description: "Beef Pares", price: "₱258", image: S2, category: "Special" },
+        { title: "S3", description: "Crispy Kare-Kare", price: "₱268", image: S3, category: "Special" },
+        { title: "S4", description: "Crispy Pata", price: "₱648", image: S4, category: "Special" },
+        { title: "S5", description: "Moroccan Chicken", price: "₱249", image: S5, category: "Special" },
+        { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: promo1, category: "Promos" },
+        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo2, category: "Promos" },
+        { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: promo3, category: "Promos" },
     ];
 
     const filteredItems = menuItems
@@ -119,7 +154,7 @@ const Menu = () => {
             backgroundColor: '#FFD54F',
             border: '2px solid #4E342E',
             borderRadius: '10px',
-            width:'100px',
+            width:'200px',
         },
         dropdownItem: {
             color: '#4E342E',
@@ -139,12 +174,12 @@ const Menu = () => {
             color: '#4E342E',
             cursor: 'pointer',
             marginBottom: '30px',
+            borderRadius:'30px',
         },
         menuItemImage: {
-            width: '150px',
-            height: '150px',
-            borderRadius: '10px',
-            objectFit: 'cover',
+            width: '300px',
+            height: '200px',
+            borderRadius: '30px',
             marginBottom: '10px',
         },
         menuItemTitle: {
@@ -184,27 +219,26 @@ const Menu = () => {
         },
         popup: {
             position: 'fixed',
-            top: '50%',
+            top: '60%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#FFD54F',
             border: '2px solid #4E342E',
             borderRadius: '10px',
-            padding: '20px',
+            padding: '30px',
             zIndex: 1000,
             boxShadow: '0 0 15px rgba(0, 0, 0, 0.3)',
-            width: '90%', // Adjusted width for mobile
+            width: '100%', // Adjusted width for mobile
             maxWidth: '600px',
             maxHeight: '80vh',
-            overflow: 'hidden',
+            overflow: 'auto', // Changed to auto to handle overflow
             textAlign: 'center',
-            transition: 'opacity 0.3s ease',
+            position: 'relative', // Ensure close button can be positioned absolutely
         },
         popupImage: {
-            width: '150px',
-            height: '150px',
-            borderRadius: '10px',
-            objectFit: 'cover',
+            width: '350px',
+            height: '300px',
+            borderRadius: '30px',
         },
         popupTitle: {
             fontSize: '1.5em',
@@ -236,8 +270,9 @@ const Menu = () => {
         },
         carouselImage: {
             width: '100%',
-            height: '500px', // Adjusted height for mobile
+            height: '90%', // Adjusted height for mobile
             objectFit: 'cover',
+            borderRadius:'30px',
         },
     };
     
