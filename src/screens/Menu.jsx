@@ -5,6 +5,7 @@ import MenuItem from '../components/MenuItem';
 import Header from '../components/Header';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import promo1 from '../img/promo1.png';
 
 
 const Menu = () => {
@@ -38,8 +39,8 @@ const Menu = () => {
         { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: "", category: "Combo" },
         { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: "", category: "Combo" },
         { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: "", category: "Combo" },
-        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: "https://cdn.discordapp.com/attachments/752710332555722822/1274075950111526914/440096245_854456160029670_5983124491670944527_n.jpg?ex=66c197f1&is=66c04671&hm=e99ecfb416e440936ed4fedddc6f786d473d9edf422f59a3407cfe883985ac28&", category: "Promos" },
-        { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: "https://cdn.discordapp.com/attachments/1216019980852658216/1274401912174805073/screenshot-1723911440391.png?ex=66c21ec5&is=66c0cd45&hm=1db7c3d8d3aa17fbb9189595b5bf0a7a7939274183bc55b7d77e60ce82d14454&", category: "Promos" },
+        { title: "Pork Sisig with 1 Bucket of Beersssss", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo1, category: "Promos" },
+        { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: "", category: "Promos" },
         { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: "/path/to/image3.jpg", category: "Promos" },
     ];
 
@@ -119,7 +120,7 @@ const Menu = () => {
             backgroundColor: '#FFD54F',
             border: '2px solid #4E342E',
             borderRadius: '10px',
-            width:'100px',
+            width:'200px',
         },
         dropdownItem: {
             color: '#4E342E',
@@ -139,12 +140,12 @@ const Menu = () => {
             color: '#4E342E',
             cursor: 'pointer',
             marginBottom: '30px',
+            borderRadius:'30px',
         },
         menuItemImage: {
-            width: '150px',
-            height: '150px',
-            borderRadius: '10px',
-            objectFit: 'cover',
+            width: '300px',
+            height: '200px',
+            borderRadius: '30px',
             marginBottom: '10px',
         },
         menuItemTitle: {
@@ -184,27 +185,26 @@ const Menu = () => {
         },
         popup: {
             position: 'fixed',
-            top: '50%',
+            top: '60%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#FFD54F',
             border: '2px solid #4E342E',
             borderRadius: '10px',
-            padding: '20px',
+            padding: '30px',
             zIndex: 1000,
             boxShadow: '0 0 15px rgba(0, 0, 0, 0.3)',
-            width: '90%', // Adjusted width for mobile
+            width: '100%', // Adjusted width for mobile
             maxWidth: '600px',
             maxHeight: '80vh',
-            overflow: 'hidden',
+            overflow: 'auto', // Changed to auto to handle overflow
             textAlign: 'center',
-            transition: 'opacity 0.3s ease',
+            position: 'relative', // Ensure close button can be positioned absolutely
         },
         popupImage: {
-            width: '150px',
-            height: '150px',
-            borderRadius: '10px',
-            objectFit: 'cover',
+            width: '350px',
+            height: '300px',
+            borderRadius: '30px',
         },
         popupTitle: {
             fontSize: '1.5em',
@@ -236,8 +236,9 @@ const Menu = () => {
         },
         carouselImage: {
             width: '100%',
-            height: '500px', // Adjusted height for mobile
+            height: '90%', // Adjusted height for mobile
             objectFit: 'cover',
+            borderRadius:'30px',
         },
     };
     
