@@ -25,13 +25,12 @@ const Contact = () => {
           <aside style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <img
               className="a"
-              src="src/img/promo3.png"
-              alt="Avatar"
+              src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725073842257/SaveClip.App_447243121_950513916772050_8557574923951589759_n.jpg?ex=66d081f9&is=66cf3079&hm=5953e8fa13320f815395d928a44a7549121a9f3f7166b52659bb230c17747fd0&"
               style={{ borderRadius: '50%', maxWidth: '400px', zIndex: 1, transform: 'translate(0px, -90px)' }}
             />
             <img
               className="b"
-              src="img/2X2 picture TVillena.png"
+              src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725543469181/SaveClip.App_291691932_181520910981838_8318319657057865379_n.jpg?ex=66d081fa&is=66cf307a&hm=738bec6b844bde83d75640c4526ac52add1627aa3cf9119a33552162a28ee2ff&"
               alt="Avatar"
               style={{ borderRadius: '50%', maxWidth: '400px', position: 'absolute', top: '50px', left: '50px', zIndex: 2, transform: 'translate(20px, 90px)' }}
             />
