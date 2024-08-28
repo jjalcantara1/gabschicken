@@ -5,12 +5,14 @@
     font-weight: 400;
     font-style: normal;
     border-radius: 2rem;
+
 }
 
 #home:hover{
     background-color: #783F1D;
     color: white;
     border-radius: 2rem;
+    transition: 0.2s ease-in-out;
 }
 
 #menu{
@@ -20,12 +22,14 @@
     font-weight: 400;
     font-style: normal;
     border-radius: 2rem;
+
 }
 
 #menu:hover{
     background-color: #783F1D;
     color: white;
     border-radius: 2rem;
+    transition: 0.2s ease-in-out;
 }
 
 #contactus{
@@ -35,12 +39,14 @@
     font-weight: 400;
     font-style: normal;
     border-radius: 2rem;
+
 }
 
 #contactus:hover{
     background-color: #783F1D;
     color: white;
     border-radius: 2rem;
+    transition: 0.2s ease-in-out;
 }
 
 /* this is for the header line di ko nga lang matago pag naka small website tho remove this if di maayos pls */
@@ -73,35 +79,34 @@
 
 #navbar {
     background-color: #0A5C36 !important;
-    height: 8rem fit-content;
+    height: 6rem fit-content;
     transition: all 0.3s ease;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    margin-bottom: 20rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
 }
 
 
 #navbar.scrolled {
     background-color: #04371F !important;
-    height: 6rem fit-content; 
-    padding: 0.5rem 1rem; 
-    font-size: 1.2rem;
+    height: 4.5rem fit-content; 
+    padding: 0.2rem 0.5rem; 
+    font-size: 1rem;
+    -webkit-box-shadow: 2px 3px 8px 3px rgba(4,55,31,0.47);
+    -moz-box-shadow: 2px 3px 8px 3px rgba(4,55,31,0.47);
+    box-shadow: 2px 3px 8px 3px rgba(4,55,31,0.47);
 }
 
 #navbar img {
-    height: 6.25rem;
+    height: 5.3rem;
     transition: height 0.3s ease;
     margin-right: -7.2rem;
 }
 
 #navbar.scrolled img {
-    height: 5.3rem;
+    height: 4.3rem;
 }
-
-
-

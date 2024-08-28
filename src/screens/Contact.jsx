@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import { FaInstagram, FaFacebook, FaLink, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons
 
 const Contact = () => {
   return (
@@ -24,7 +25,7 @@ const Contact = () => {
           <aside style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <img
               className="a"
-              src="src\img\promo3.png"
+              src="src/img/promo3.png"
               alt="Avatar"
               style={{ borderRadius: '50%', maxWidth: '400px', zIndex: 1, transform: 'translate(0px, -90px)' }}
             />
@@ -36,26 +37,40 @@ const Contact = () => {
             />
           </aside>
 
-          <section style={{ marginLeft: '20px' }}>
-            <p style={{ fontSize: '3em', color: 'white', textDecoration: 'underline' }}>GET IN TOUCH!</p>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em', color: 'white' }}>
-              <img src="img/promo1.png" alt="phone" style={{ width: '60px', marginRight: '15px' }} /> Phone No.
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em', color: 'white' }}>
-              <img src="img/promo1.png" alt="email" style={{ width: '60px', marginRight: '15px' }} /> Gmail
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em', color: 'white' }}>
-              <img src="img/promo1.png" alt="linktr" style={{ width: '60px', marginRight: '15px' }} /> Linktr
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em', color: 'white' }}>
-              <img src="img/promo1.png" alt="location" style={{ width: '60px', marginRight: '15px' }} /> Location
+          <section style={{ marginLeft: '20px', color: 'white' }}>
+            <p style={{ fontSize: '3em', textDecoration: 'underline' }}>GET IN TOUCH!</p>
+            <div style={{ marginBottom: '20px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaPhone style={{ marginRight: '15px' }} /> 
+                <span>+63966 163 7748 / +63925 357 1460</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaEnvelope style={{ marginRight: '15px' }} /> 
+                <span>gabs.chickeninasal@gmail.com</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaInstagram style={{ marginRight: '15px' }} /> 
+                <a href="https://www.instagram.com/gabs.chickeninasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Instagram</a>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaFacebook style={{ marginRight: '15px' }} /> 
+                <a href="https://www.facebook.com/Gabs.ChickenInasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Facebook</a>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaLink style={{ marginRight: '15px' }} /> 
+                <a href="https://linktr.ee/gabs.chickeninasal?fbclid=IwY2xjawE8BEtleHRuA2FlbQIxMAABHUzN0IjfBz1eKl6B1-SfFIanv8iZV17huGmOWigOHx5JZPm86IU0QylSBQ_aem_K8LR6d5MFF0-VYj8ra50Nw" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Linktree</a>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
+                <FaMapMarkerAlt style={{ marginRight: '15px' }} /> 
+                <span>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</span>
+              </div>
             </div>
           </section>
         </div>
-        {/* Ensure the map is placed at the bottom */}
+
         <div style={{
-          marginTop: 'auto', 
-          width: '100%', 
+          marginTop: 'auto',
+          width: '100%',
           height: '400px',
           marginBottom: '20px'
         }}>

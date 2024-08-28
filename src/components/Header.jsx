@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
 
 import '../components/Header.css';
+import '../img/gablogo.png';
 
 function Header() {
 
@@ -31,7 +32,7 @@ function Header() {
       <Container>
         <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>
           <img
-            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66c434a4&is=66c2e324&hm=2910f5dbe92acef22f916a98369b350b247100b5ab52d682c6b884de823e9dda&'}
+            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66cd6f24&is=66cc1da4&hm=7a85912a3596ad1f77225427e2a523fb2b356d18917bcbe3fe2a5b9c6262b306&'}
             height="50"
             className="d-inline-block align-top"
             alt="Logo"
