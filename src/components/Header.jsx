@@ -32,7 +32,7 @@ function Header() {
       <Container>
         <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>
           <img
-            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66cd6f24&is=66cc1da4&hm=7a85912a3596ad1f77225427e2a523fb2b356d18917bcbe3fe2a5b9c6262b306&'}
+            src={'https://cdn.discordapp.com/attachments/360412196913807360/1274431572652851340/image-removebg-preview.png?ex=66d01224&is=66cec0a4&hm=3684b2eca107616dc5b8fec83c570893504ed617e5a9cefa67b1994943c14cb4&'}
             height="50"
             className="d-inline-block align-top"
             alt="Logo"
