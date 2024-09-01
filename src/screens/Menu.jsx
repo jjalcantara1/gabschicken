@@ -38,7 +38,7 @@ import promo3 from '../img/promo3.png';
 
 
 const Menu = () => {
-    const categories = ["Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos"];
+    const categories = ["All", "Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos"];
     const [activeCategory, setActiveCategory] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [searchTerm, setSearchTerm] = useState('');
@@ -79,8 +79,11 @@ const Menu = () => {
     ];
 
     const filteredItems = menuItems
-        .filter(item => item.category === activeCategory)
-        .filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()));
+        .filter(item => activeCategory === "All" || item.category === activeCategory) // Include all items if "All" is selected
+        .filter(item =>
+            item.title.toLowerCase().includes(searchTerm.toLowerCase()) || // Check title for the search term
+            item.description.toLowerCase().includes(searchTerm.toLowerCase()) // Check description for the search term
+        );        
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);

@@ -14,6 +14,7 @@ const Contact = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '20px',
+        color: 'white', // Set default text color to white for better contrast
       }}>
         <div style={{
           display: 'flex',
@@ -36,16 +37,22 @@ const Contact = () => {
             />
           </aside>
 
-          <section style={{ marginLeft: '20px', color: 'white' }}>
-            <p style={{ fontSize: '3em', textDecoration: 'underline' }}>GET IN TOUCH!</p>
+          <section style={{ maxWidth: '500px' }}>
+            <p style={{
+              fontSize: '3em',
+              fontWeight: 'bold',
+              textShadow: '2px 2px #d4a125',
+              marginBottom: '30px',
+              color: '#FFD700', // Use a gold color for emphasis
+            }}>GET IN TOUCH!</p>
             <div style={{ marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
                 <FaPhone style={{ marginRight: '15px' }} /> 
-                <span>+63966 163 7748 / +63925 357 1460</span>
+                <span style={{ color: 'white' }}>+63966 163 7748 / +63925 357 1460</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
                 <FaEnvelope style={{ marginRight: '15px' }} /> 
-                <span>gabs.chickeninasal@gmail.com</span>
+                <span style={{ color: 'white' }}>gabs.chickeninasal@gmail.com</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
                 <FaInstagram style={{ marginRight: '15px' }} /> 
@@ -61,7 +68,7 @@ const Contact = () => {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
                 <FaMapMarkerAlt style={{ marginRight: '15px' }} /> 
-                <span>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</span>
+                <span style={{ color: 'white' }}>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</span>
               </div>
             </div>
           </section>
