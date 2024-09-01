@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import { FaInstagram, FaFacebook, FaLink, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons
+import { FaInstagram, FaFacebook, FaLink, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -14,60 +14,77 @@ const Contact = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '20px',
-        color: 'white', // Set default text color to white for better contrast
+        color: 'white',
       }}>
         <div style={{
           display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          justifyContent: 'center',
+          alignItems: 'flex-start', // Adjust alignment for more space between images and contact info
           width: '80%',
           flexWrap: 'wrap',
         }}>
-          <aside style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-            <img
-              className="a"
-              src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725073842257/SaveClip.App_447243121_950513916772050_8557574923951589759_n.jpg?ex=66d081f9&is=66cf3079&hm=5953e8fa13320f815395d928a44a7549121a9f3f7166b52659bb230c17747fd0&"
-              style={{ borderRadius: '50%', maxWidth: '400px', zIndex: 1, transform: 'translate(0px, -90px)' }}
-            />
-            <img
-              className="b"
-              src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725543469181/SaveClip.App_291691932_181520910981838_8318319657057865379_n.jpg?ex=66d081fa&is=66cf307a&hm=738bec6b844bde83d75640c4526ac52add1627aa3cf9119a33552162a28ee2ff&"
-              alt="Avatar"
-              style={{ borderRadius: '50%', maxWidth: '400px', position: 'absolute', top: '50px', left: '50px', zIndex: 2, transform: 'translate(20px, 90px)' }}
-            />
+          <aside style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '40px' }}>
+            <div style={{
+              position: 'relative',
+              width: 'fit-content',
+              borderRadius: '50%',
+              boxShadow: '-3px -3px 0px 4px rgba(212,161,37,1)', // Shadow moved to the upper left
+              zIndex: 1,
+              marginLeft: '-50px', // Move the top image further to the left
+            }}>
+              <img
+                src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725073842257/SaveClip.App_447243121_950513916772050_8557574923951589759_n.jpg?ex=66d081f9&is=66cf3079&hm=5953e8fa13320f815395d928a44a7549121a9f3f7166b52659bb230c17747fd0&"
+                style={{ borderRadius: '50%', maxWidth: '200px', margin: 'auto' }}
+              />
+            </div>
+            <div style={{
+              position: 'relative',
+              width: 'fit-content',
+              borderRadius: '50%',
+              boxShadow: '-3px -3px 0px 4px rgba(212,161,37,1)', // Shadow moved to the upper left
+              zIndex: 2,
+              marginTop: '-40px', // Adjust to move more in line with the middle of the bottom image
+              marginLeft: '100px', // Adjust positioning to align with the updated top image
+            }}>
+              <img
+                src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725543469181/SaveClip.App_291691932_181520910981838_8318319657057865379_n.jpg?ex=66d081fa&is=66cf307a&hm=738bec6b844bde83d75640c4526ac52add1627aa3cf9119a33552162a28ee2ff&"
+                style={{ borderRadius: '50%', maxWidth: '200px', margin: 'auto' }}
+              />
+            </div>
           </aside>
 
-          <section style={{ maxWidth: '500px' }}>
+          <section style={{ maxWidth: '500px', textAlign: 'left' }}>
             <p style={{
               fontSize: '3em',
               fontWeight: 'bold',
               textShadow: '2px 2px #d4a125',
               marginBottom: '30px',
-              color: '#FFD700', // Use a gold color for emphasis
+              color: '#FFD700',
+              textDecoration: 'underline', // Underline the heading
             }}>GET IN TOUCH!</p>
             <div style={{ marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaPhone style={{ marginRight: '15px' }} /> 
+                <FaPhone style={{ marginRight: '15px' }} />
                 <span style={{ color: 'white' }}>+63966 163 7748 / +63925 357 1460</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaEnvelope style={{ marginRight: '15px' }} /> 
+                <FaEnvelope style={{ marginRight: '15px' }} />
                 <span style={{ color: 'white' }}>gabs.chickeninasal@gmail.com</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaInstagram style={{ marginRight: '15px' }} /> 
+                <FaInstagram style={{ marginRight: '15px' }} />
                 <a href="https://www.instagram.com/gabs.chickeninasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Instagram</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaFacebook style={{ marginRight: '15px' }} /> 
+                <FaFacebook style={{ marginRight: '15px' }} />
                 <a href="https://www.facebook.com/Gabs.ChickenInasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Facebook</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaLink style={{ marginRight: '15px' }} /> 
+                <FaLink style={{ marginRight: '15px' }} />
                 <a href="https://linktr.ee/gabs.chickeninasal?fbclid=IwY2xjawE8BEtleHRuA2FlbQIxMAABHUzN0IjfBz1eKl6B1-SfFIanv8iZV17huGmOWigOHx5JZPm86IU0QylSBQ_aem_K8LR6d5MFF0-VYj8ra50Nw" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Linktree</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaMapMarkerAlt style={{ marginRight: '15px' }} /> 
+                <FaMapMarkerAlt style={{ marginRight: '15px' }} />
                 <span style={{ color: 'white' }}>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</span>
               </div>
             </div>
