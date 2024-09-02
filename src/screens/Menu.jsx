@@ -35,6 +35,26 @@ import S5 from '../img/S5.jpg';
 import promo1 from '../img/promo1.png';
 import promo2 from '../img/promo2.png';
 import promo3 from '../img/promo3.png';
+import A1price from '../img/A1price.png';
+import A2price from '../img/A2price.png';
+import A3price from '../img/A3price.png';
+import A4price from '../img/A4price.png';
+import A5price from '../img/A5price.png';
+import A6price from '../img/A6price.png';
+import G4price from '../img/G4price.png';
+import G6price from '../img/G6price.png';
+import F1price from '../img/F1price.png';
+import F2price from '../img/F2price.png';
+import F3price from '../img/F3price.png';
+import F4price from '../img/F4price.png';
+import F5price from '../img/F5price.png';
+import C1price from '../img/C1price.png';
+import C3price from '../img/C3price.png';
+import C4price from '../img/C4price.png';
+import S4price from '../img/S4price.png';
+import P1price from '../img/P1price.png';
+import P2price from '../img/P2price.png';
+import P3price from '../img/P3price.png';
 
 
 const Menu = () => {
@@ -114,7 +134,7 @@ const Menu = () => {
             textAlign: 'center',
         },
         categoryContainer: {
-            backgroundColor: '#FFD54F',
+            backgroundColor: '#ffbd59',
             borderRadius: '50px',
             padding: '10px 0',
             margin: '0 auto',
@@ -168,7 +188,8 @@ const Menu = () => {
             color: '#FFD54F',
         },
         menuItem: {
-            backgroundColor: '#FFD54F',
+            position: 'relative',
+            backgroundColor: '#ffbd59',
             border: '2px solid #4E342E',
             borderRadius: '10px',
             padding: '15px',
@@ -179,8 +200,16 @@ const Menu = () => {
             marginBottom: '30px',
             borderRadius:'30px',
         },
+ 
+        priceTagImage: {
+            position: 'absolute',
+            top: '-33.4px',
+            right: '-55.5px',
+            width: '250px', // Adjust size as needed
+            height: '150px', // Adjust size as needed
+        },
         menuItemImage: {
-            width: '300px',
+            width: '350px',
             height: '200px',
             borderRadius: '30px',
             marginBottom: '10px',
@@ -188,15 +217,16 @@ const Menu = () => {
         menuItemTitle: {
             fontWeight: 'bold',
             marginTop: '10px',
-            fontSize: '1.2em',
+            fontSize: '3em',
+            color: '#ae3740'
         },
         menuItemDescription: {
-            color: '#4E342E',
-            fontSize: '1em',
+            color: '#ae3740',
+            fontSize: '2.5em',
         },
         menuItemPrice: {
             color: '#C62828',
-            fontSize: '1.5em',
+            fontSize: '0em',
             fontWeight: 'bold',
         },
         searchInput: {
@@ -239,17 +269,17 @@ const Menu = () => {
             position: 'relative', // Ensure close button can be positioned absolutely
         },
         popupImage: {
-            width: '350px',
+            width: '500px',
             height: '300px',
             borderRadius: '30px',
         },
         popupTitle: {
-            fontSize: '1.5em',
+            fontSize: '2em',
             fontWeight: 'bold',
             marginTop: '15px',
         },
         popupDescription: {
-            fontSize: '1.2em',
+            fontSize: '2.2em',
             color: '#4E342E',
             marginTop: '10px',
         },
@@ -359,6 +389,217 @@ const Menu = () => {
                                 style={styles.menuItem}
                                 onClick={() => handleItemClick(item)}
                             >
+                                
+                                    {item.title === 'A1' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                     {item.title === 'A2' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A2price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                    {item.title === 'A3' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A3price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'A4' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'A5' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A5price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'A6' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A6price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G1' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G2' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G3' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A2price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G4' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={G4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G5' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G6' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={G6price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'G7' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={A6price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'F1' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'F2' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F2price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'F3' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F3price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'F4' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'F5' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F5price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'C1' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={C1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'C2' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F5price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'C3' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={C3price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'C4' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={C4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'S1' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F3price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'S2' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={F4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'S3' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={C1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'S4' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={S4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'S5' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={G4price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'Sisig Tokwa with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={P1price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'Pork Sisig with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={P2price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
+                                {item.title === 'Crispy Pata with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
+                                    <img
+                                        src={P3price}
+                                        alt="Price Tag"
+                                        style={styles.priceTagImage}
+                                    />
+                                )}
                                 <img
                                     src={item.image}
                                     alt={item.title}
