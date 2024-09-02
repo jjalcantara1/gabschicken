@@ -19,7 +19,7 @@ const Contact = () => {
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'flex-start', // Adjust alignment for more space between images and contact info
+          alignItems: 'flex-start',
           width: '80%',
           flexWrap: 'wrap',
         }}>
@@ -28,27 +28,27 @@ const Contact = () => {
               position: 'relative',
               width: 'fit-content',
               borderRadius: '50%',
-              boxShadow: '-3px -3px 0px 4px rgba(212,161,37,1)', // Shadow moved to the upper left
+              boxShadow: '-4px -4px 0px 5px rgba(212,161,37,1)', // Adjusted shadow for larger size
               zIndex: 1,
-              marginLeft: '-50px', // Move the top image further to the left
+              marginLeft: '-50px',
             }}>
               <img
                 src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725073842257/SaveClip.App_447243121_950513916772050_8557574923951589759_n.jpg?ex=66d081f9&is=66cf3079&hm=5953e8fa13320f815395d928a44a7549121a9f3f7166b52659bb230c17747fd0&"
-                style={{ borderRadius: '50%', maxWidth: '200px', margin: 'auto' }}
+                style={{ borderRadius: '50%', maxWidth: '240px', margin: 'auto' }} // Increased size by 20%
               />
             </div>
             <div style={{
               position: 'relative',
               width: 'fit-content',
               borderRadius: '50%',
-              boxShadow: '-3px -3px 0px 4px rgba(212,161,37,1)', // Shadow moved to the upper left
+              boxShadow: '-4px -4px 0px 5px rgba(212,161,37,1)', // Adjusted shadow for larger size
               zIndex: 2,
-              marginTop: '-40px', // Adjust to move more in line with the middle of the bottom image
-              marginLeft: '100px', // Adjust positioning to align with the updated top image
+              marginTop: '-48px', // Adjusted positioning
+              marginLeft: '120px', // Adjusted positioning for larger image
             }}>
               <img
                 src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725543469181/SaveClip.App_291691932_181520910981838_8318319657057865379_n.jpg?ex=66d081fa&is=66cf307a&hm=738bec6b844bde83d75640c4526ac52add1627aa3cf9119a33552162a28ee2ff&"
-                style={{ borderRadius: '50%', maxWidth: '200px', margin: 'auto' }}
+                style={{ borderRadius: '50%', maxWidth: '240px', margin: 'auto' }} // Increased size by 20%
               />
             </div>
           </aside>
@@ -60,7 +60,7 @@ const Contact = () => {
               textShadow: '2px 2px #d4a125',
               marginBottom: '30px',
               color: '#FFD700',
-              textDecoration: 'underline', // Underline the heading
+              textDecoration: 'underline',
             }}>GET IN TOUCH!</p>
             <div style={{ marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
@@ -92,7 +92,7 @@ const Contact = () => {
         </div>
 
         <div style={{
-          marginTop: 'auto',
+          marginTop: '40px', // Added space before the Google Maps iframe
           width: '100%',
           height: '400px',
           marginBottom: '20px'
