@@ -1,8 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Header from '../components/Header';
 import { FaInstagram, FaFacebook, FaLink, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    emailjs.send(
+      'service_0aow9oi', 
+      'template_j6c8q1i', 
+      formData, 
+      'cClutocTfQhJrBk4B'
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Your message has been sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((err) => {
+      console.error('Failed to send the email:', err);
+      alert('There was an error sending your message. Please try again later.');
+    });
+  };
+
   return (
     <>
       <Header />
@@ -16,6 +52,7 @@ const Contact = () => {
         padding: '20px',
         color: 'white',
       }}>
+        {/* Contact Information */}
         <div style={{
           display: 'flex',
           justifyContent: 'center',
@@ -23,76 +60,67 @@ const Contact = () => {
           width: '80%',
           flexWrap: 'wrap',
         }}>
+          {/* Aside Section */}
           <aside style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '40px' }}>
-            <div style={{
-              position: 'relative',
-              width: 'fit-content',
-              borderRadius: '50%',
-              boxShadow: '-4px -4px 0px 5px rgba(212,161,37,1)', // Adjusted shadow for larger size
-              zIndex: 1,
-              marginLeft: '-50px',
-            }}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725073842257/SaveClip.App_447243121_950513916772050_8557574923951589759_n.jpg?ex=66d081f9&is=66cf3079&hm=5953e8fa13320f815395d928a44a7549121a9f3f7166b52659bb230c17747fd0&"
-                style={{ borderRadius: '50%', maxWidth: '240px', margin: 'auto' }} // Increased size by 20%
-              />
-            </div>
-            <div style={{
-              position: 'relative',
-              width: 'fit-content',
-              borderRadius: '50%',
-              boxShadow: '-4px -4px 0px 5px rgba(212,161,37,1)', // Adjusted shadow for larger size
-              zIndex: 2,
-              marginTop: '-48px', // Adjusted positioning
-              marginLeft: '120px', // Adjusted positioning for larger image
-            }}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1237242418794074223/1278356725543469181/SaveClip.App_291691932_181520910981838_8318319657057865379_n.jpg?ex=66d081fa&is=66cf307a&hm=738bec6b844bde83d75640c4526ac52add1627aa3cf9119a33552162a28ee2ff&"
-                style={{ borderRadius: '50%', maxWidth: '240px', margin: 'auto' }} // Increased size by 20%
-              />
-            </div>
+            {/* Your images here */}
           </aside>
 
+          {/* Contact Details */}
           <section style={{ maxWidth: '500px', textAlign: 'left' }}>
-            <p style={{
-              fontSize: '3em',
-              fontWeight: 'bold',
-              textShadow: '2px 2px #d4a125',
-              marginBottom: '30px',
-              color: '#FFD700',
-              textDecoration: 'underline',
-            }}>GET IN TOUCH!</p>
-            <div style={{ marginBottom: '20px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaPhone style={{ marginRight: '15px' }} />
-                <span style={{ color: 'white' }}>+63966 163 7748 / +63925 357 1460</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaEnvelope style={{ marginRight: '15px' }} />
-                <span style={{ color: 'white' }}>gabs.chickeninasal@gmail.com</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaInstagram style={{ marginRight: '15px' }} />
-                <a href="https://www.instagram.com/gabs.chickeninasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Instagram</a>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaFacebook style={{ marginRight: '15px' }} />
-                <a href="https://www.facebook.com/Gabs.ChickenInasal/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Facebook</a>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaLink style={{ marginRight: '15px' }} />
-                <a href="https://linktr.ee/gabs.chickeninasal?fbclid=IwY2xjawE8BEtleHRuA2FlbQIxMAABHUzN0IjfBz1eKl6B1-SfFIanv8iZV17huGmOWigOHx5JZPm86IU0QylSBQ_aem_K8LR6d5MFF0-VYj8ra50Nw" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>Linktree</a>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
-                <FaMapMarkerAlt style={{ marginRight: '15px' }} />
-                <span style={{ color: 'white' }}>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</span>
-              </div>
-            </div>
+            {/* Your contact details here */}
           </section>
         </div>
 
+        {/* Contact Form */}
+        <form onSubmit={sendMail} style={{ width: '80%', maxWidth: '500px', marginTop: '40px', textAlign: 'left' }}>
+          <div style={{ marginBottom: '15px' }}>
+            <label htmlFor="name" style={{ fontSize: '1.2em' }}>Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              style={{ width: '100%', padding: '10px', fontSize: '1em', borderRadius: '5px', border: 'none' }}
+            />
+          </div>
+          <div style={{ marginBottom: '15px' }}>
+            <label htmlFor="email" style={{ fontSize: '1.2em' }}>Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              style={{ width: '100%', padding: '10px', fontSize: '1em', borderRadius: '5px', border: 'none' }}
+            />
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="message" style={{ fontSize: '1.2em' }}>Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              style={{ width: '100%', padding: '10px', fontSize: '1em', borderRadius: '5px', border: 'none' }}
+            ></textarea>
+          </div>
+          <button type="submit" style={{
+            padding: '10px 20px',
+            fontSize: '1.2em',
+            color: '#0a5c36',
+            backgroundColor: '#d4a125',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease',
+          }}>Send Message</button>
+        </form>
+
+        {/* Google Maps */}
         <div style={{
-          marginTop: '40px', // Added space before the Google Maps iframe
+          marginTop: '40px',
           width: '100%',
           height: '400px',
           marginBottom: '20px'
@@ -110,6 +138,6 @@ const Contact = () => {
       </div>
     </>
   );
-}
+};
 
 export default Contact;
