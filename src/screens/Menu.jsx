@@ -35,26 +35,6 @@ import S5 from '../img/S5.jpg';
 import promo1 from '../img/promo1.png';
 import promo2 from '../img/promo2.png';
 import promo3 from '../img/promo3.png';
-import A1price from '../img/A1price.png';
-import A2price from '../img/A2price.png';
-import A3price from '../img/A3price.png';
-import A4price from '../img/A4price.png';
-import A5price from '../img/A5price.png';
-import A6price from '../img/A6price.png';
-import G4price from '../img/G4price.png';
-import G6price from '../img/G6price.png';
-import F1price from '../img/F1price.png';
-import F2price from '../img/F2price.png';
-import F3price from '../img/F3price.png';
-import F4price from '../img/F4price.png';
-import F5price from '../img/F5price.png';
-import C1price from '../img/C1price.png';
-import C3price from '../img/C3price.png';
-import C4price from '../img/C4price.png';
-import S4price from '../img/S4price.png';
-import P1price from '../img/P1price.png';
-import P2price from '../img/P2price.png';
-import P3price from '../img/P3price.png';
 
 
 const Menu = () => {
@@ -213,19 +193,31 @@ const Menu = () => {
             maxHeight: '27rem', 
             marginBottom: '30px',
             borderRadius:'30px',
-            overflow: 'hidden',
+            // overflow: 'hidden',
             '&:hover': {
                 transform: 'scale(1.05)',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
             }
         },
- 
-        priceTagImage: {
+        priceTag: {
             position: 'absolute',
-            top: '-33.4px',
-            right: '-55.5px',
-            width: '250px', // Adjust size as needed
-            height: '150px', // Adjust size as needed
+            top: 0,
+            right: 0,
+            fontSize: '1.5em',
+            fontWeight: 'bold',
+            color: '#fff',
+            lineHeight: '1.8',
+            paddingInline: '2em',
+            paddingBottom: '0.5em',
+            backgroundColor: '#BD1550',
+            borderImage: 'conic-gradient(#0008 0 0) 51%/0.5em',
+            clipPath: 'polygon(100% calc(100% - 0.5em), 100% 100%, calc(100% - 0.5em) calc(100% - 0.5em), 0.5em calc(100% - 0.5em), 0 100%, 0 calc(100% - 0.5em), 999px calc(100% - 0.5em - 999px), calc(100% - 999px) calc(100% - 0.5em - 999px))',
+            transform: 'translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg)',
+            transformOrigin: '0% 100%',
+            whiteSpace: 'nowrap', 
+            overflow: 'hidden', 
+            textOverflow: 'ellipsis',  
+            maxWidth: '155px', 
         },
         menuItemImage: {
             width: '100%',
@@ -246,8 +238,8 @@ const Menu = () => {
             fontWeight: 700, 
             fontStyle: 'bold', 
             textOverflow: 'ellipsis', // Add ellipsis to overflow text
-        overflow: 'hidden', // Hide overflow text
-        whiteSpace: 'nowrap', // Prevent text from wrapping
+            overflow: 'hidden', // Hide overflow text
+            whiteSpace: 'nowrap', // Prevent text from wrapping
         },
         menuItemDescription: {
             color: 'black',
@@ -256,8 +248,8 @@ const Menu = () => {
             fontWeight: 100, 
             fontStyle: 'normal',
             textOverflow: 'ellipsis', // Add ellipsis to overflow text
-        overflow: 'hidden', // Hide overflow text
-        whiteSpace: 'nowrap', // Prevent text from wrapping 
+            overflow: 'hidden', // Hide overflow text
+            whiteSpace: 'nowrap', // Prevent text from wrapping 
         },
         menuItemPrice: {
             color: '#C62828',
@@ -430,224 +422,13 @@ const Menu = () => {
                                 style={styles.menuItem}
                                 onClick={() => handleItemClick(item)}
                             >
-                                
-                                    {item.title === 'A1' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                     {item.title === 'A2' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A2price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                    {item.title === 'A3' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A3price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'A4' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'A5' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A5price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'A6' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A6price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G1' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G2' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G3' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A2price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G4' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={G4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G5' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G6' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={G6price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'G7' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={A6price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'F1' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'F2' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F2price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'F3' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F3price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'F4' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'F5' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F5price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'C1' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={C1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'C2' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F5price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'C3' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={C3price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'C4' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={C4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'S1' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F3price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'S2' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={F4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'S3' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={C1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'S4' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={S4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'S5' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={G4price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'Sisig Tokwa with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={P1price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'Pork Sisig with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={P2price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
-                                {item.title === 'Crispy Pata with 1 Bucket of Beers' && ( // Check if the item is A1 to apply the price tag
-                                    <img
-                                        src={P3price}
-                                        alt="Price Tag"
-                                        style={styles.priceTagImage}
-                                    />
-                                )}
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     style={styles.menuItemImage} />
                                 <h4 style={styles.menuItemTitle}>{item.title}</h4>
                                 <p style={styles.menuItemDescription}>{item.description}</p>
-                                <p style={styles.menuItemPrice}>{item.price}</p>
+                                <div style={styles.priceTag}>{item.price}</div>
                             </div>
                         </Col>
                     ))}
