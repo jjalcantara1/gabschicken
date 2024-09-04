@@ -9,6 +9,14 @@ const Footer = () => {
         <div className="footer-section logo-section">
           <img src="logo.png" alt="Logo" />
         </div>
+        <div className="footer-section contact-us">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</li>
+            <li>Email: gabschickeninasal@gmail.com</li>
+            <li>Phone: 0966 163 7748</li>
+          </ul>
+        </div>
         <div className="footer-section follow-us">
           <h4>Follow Us</h4>
           <div className="social-icons">
@@ -19,14 +27,6 @@ const Footer = () => {
               <FaInstagram />
             </a>
           </div>
-        </div>
-        <div className="footer-section contact-us">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</li>
-            <li>Email: gabschickeninasal@gmail.com</li>
-            <li>Phone: 0966 163 7748</li>
-          </ul>
         </div>
       </div>
       <div className="footer-bottom">
