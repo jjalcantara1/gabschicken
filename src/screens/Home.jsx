@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import './Home.css';
 
+import wow1 from '../img/wow1.png'
+import wow2 from '../img/wow2.png'
+import section3bg from '../img/section3bg.png'
+
 const carouselData = [
   { id: 1, title: "Gab's Signature Chicken Inasal", description: "A Filipino classic, Chicken Adobo is a savory and tangy dish where tender chicken pieces are marinated and simmered in a rich blend of soy sauce, vinegar, garlic, and bay leaves. The result is a flavorful dish with a perfect balance of salty, sour, and umami notes, making it an irresistible comfort food.", imgSrc: 'https://pbs.twimg.com/media/FxPiQ9TX0AECxuY.jpg' },
   { id: 2, title: "Special Crispy Pork Kare-kare", description: "Kare-Kare is a traditional Filipino stew known for its rich, creamy peanut sauce. This hearty dish features oxtail, tripe, and a medley of vegetables, including eggplant, green beans, and banana blossoms. The velvety sauce, thickened with ground peanuts and annatto seeds, is complemented by the bold, salty kick of bagoong (fermented shrimp paste) on the side.", imgSrc: 'https://i.pinimg.com/736x/dd/18/b3/dd18b311f3ceaa8579f5c420ead9b4a1.jpg' },
@@ -65,7 +69,17 @@ const Home = () => {
         <div className='section2container'>
 
           <div className='image-container'>
+            <div>
               <img className='section2image' src={'https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-6/418936971_863674885455954_5653540081634286195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE4UCrmaXEnwtvuOyPM95A-ergXL68SRQ16uBcvrxJFDXSnIxwvNMPnM4CDPwrHWKLlEitxvANSNlL7sBcQ_3br&_nc_ohc=c4-IHCqMrGMQ7kNvgEjKS7v&_nc_ht=scontent.fcrk1-2.fna&oh=00_AYDPu5lielI8OuqV0EUZPoEGC8p7nocIVekWQuYxNxpmKw&oe=66D27706'} />
+            </div>
+            <img className='section2imagedesign1' alt='wow' src={wow1} />
+            <div>
+
+              <div>
+              <img className='section2imagedesign2' alt='lines emphasizing image' src={wow2} />
+              </div>
+
+            </div>
           </div>
 
           <div>
@@ -80,14 +94,14 @@ const Home = () => {
       <div className='linecolor'>
       </div>
       
-      <div className='section2endbg'>
+      <div className='section2endbg' style={{backgroundImage:`url(${section3bg})`}}>
       <div className='section2end'>
         <h1 className='section2endtext'>Smthn abt questions then button for FAQs</h1>
         <button className='section2button2'>Go to FAQs</button>
       </div>
       </div>
 
-      <div className="section3">
+      <div className="section3" style={{backgroundImage:`url(${section3bg})`}}>
 
       <div className="text-content">
         <h1>Something about us smthn yeayeayea</h1>

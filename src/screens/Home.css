@@ -237,7 +237,7 @@
   
   /* 3rd minimize */
   
-  @media (max-width: 590px) { 
+  @media (max-width: 600px) { 
     .carousel-slide{
       flex-direction: column;
     }
@@ -245,7 +245,7 @@
   
   @media (max-width: 590px) { 
     .carousel-slide .text h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
         margin-left: -7rem;
         margin-right: -7rem;
     }
@@ -361,6 +361,7 @@
     height: fit-content;
     position: relative; 
     overflow: hidden; 
+    width: 100%;
   }
   
   .section2::before {
@@ -387,7 +388,7 @@
     display: flex;
     justify-content: space-between; /* Space between text and image */
     align-items: center; /* Vertically center the content */
-    background-color: #783e1dda;
+    background-color: #783e1dcb;
     border-radius: 3rem;
     width: 55%;
     height: auto;
@@ -456,17 +457,40 @@
     transition: 0.2s ease-in-out;
   }
   
-  .section2image {
+  .image-container {
+    position: relative;
+}
+
+.section2image {
     width: 95%;
     border: .2rem solid #FFBD59;
     height: auto; 
     object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1 / 1; /* Keep the aspect ratio */
-    -webkit-box-shadow: 10px 10px 0px -1px #FFBD59;
-    -moz-box-shadow: 10px 10px 0px -1px #FFBD59;
-    box-shadow: 10px 10px 0px -1px #FFBD59;
-  }
+    -webkit-box-shadow: 10px 10px 0px -1px #ffbd598e;
+    -moz-box-shadow: 10px 10px 0px -1px #ffbd598e;
+    box-shadow: 10px 10px 0px -1px #ffbd598e;
+    position: relative;
+}
+
+.section2imagedesign1 {
+  position: absolute;
+  top: -7%;
+  left: -20%;
+  width: 70%; 
+  height: auto;
+  z-index: 2;
+}
+
+.section2imagedesign2 {
+  position: absolute;
+  top: 60%;
+  left: 52%;
+  width: 70%; 
+  height: auto;
+  z-index: 3;
+}
   
   /* 1st minimize */
   
@@ -484,9 +508,30 @@
   @media (max-width: 1200px) { 
     .section2image{
       width:65%;
-      margin-left: 6rem;
       margin-bottom: 2rem;
-  
+      margin-left: -1rem;
+    }
+  }
+
+  @media (max-width: 1200px) { 
+    .section2imagedesign1{
+      position: absolute;
+      top: -7%;
+      left: 1%;
+      width: 50%; 
+      height: auto;
+      z-index: 2;
+    }
+  }
+
+  @media (max-width: 1200px) { 
+    .section2imagedesign2{
+      position: absolute;
+      top: 58%;
+      left: 48%;
+      width: 50%; 
+      height: auto;
+      z-index: 3;
     }
   }
   
@@ -520,8 +565,19 @@
   @media (max-width: 991px) { 
     .section2image{
       width:65%;
-      margin-left: 4.5rem;
+      margin-left: -1rem;
       margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 991px) { 
+    .section2imagedesign{
+      position: absolute;
+      top: -7%;
+      left: 1%;
+      width: 50%; 
+      height: auto;
+      z-index: 2;
     }
   }
   
@@ -555,8 +611,19 @@
   @media (max-width: 590px) { 
     .section2image{
       width: 75%;
-      margin-left: 2rem;
+      margin-left: -1rem;
       margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 590px) { 
+    .section2imagedesign{
+      position: absolute;
+      top: -7%;
+      left: 1%;
+      width: 50%; 
+      height: auto;
+      z-index: 2;
     }
   }
   
@@ -579,9 +646,7 @@
   }
   
   /* 3rd minimize */
-  
   .section2endbg{
-    background-image: url('https://cdn.discordapp.com/attachments/360412196913807360/1277686268427505694/Website_View_Homescreen_3.png?ex=66ce1190&is=66ccc010&hm=24488f2038e8991cf182c034a3e9351dc59fd430a214c683208844394f85dcf8&');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -658,7 +723,6 @@
     /* margin-top: 3rem; */
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-image: url('https://cdn.discordapp.com/attachments/360412196913807360/1277686268427505694/Website_View_Homescreen_3.png?ex=66ce1190&is=66ccc010&hm=24488f2038e8991cf182c034a3e9351dc59fd430a214c683208844394f85dcf8&');
     background-repeat: no-repeat;
     background-size: cover;
   }

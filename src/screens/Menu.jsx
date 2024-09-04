@@ -87,15 +87,15 @@ const Menu = () => {
         { title: "C1", description: "Inasal & Pork Barbecue", price: "₱268", image: C1, category: "Combo" },
         { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: C2, category: "Combo" },
         { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: C3, category: "Combo" }, 
-        { title: "C4", description: "Bab's Super Meal(Inasal, Pork Sisig, and Pork Barbecue)", price: "₱328", image: C4, category: "Combo" },
+        { title: "C4", description: "Bab's Super Meal", price: "₱328", image: C4, category: "Combo" },
         { title: "S1", description: "Chopsuey", price: "₱248", image: S1, category: "Special" },
         { title: "S2", description: "Beef Pares", price: "₱258", image: S2, category: "Special" },
         { title: "S3", description: "Crispy Kare-Kare", price: "₱268", image: S3, category: "Special" },
         { title: "S4", description: "Crispy Pata", price: "₱648", image: S4, category: "Special" },
         { title: "S5", description: "Moroccan Chicken", price: "₱249", image: S5, category: "Special" },
-        { title: "Sisig Tokwa with 1 Bucket of Beers", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: promo1, category: "Promos" },
-        { title: "Pork Sisig with 1 Bucket of Beers", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo2, category: "Promos" },
-        { title: "Crispy Pata with 1 Bucket of Beers", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: promo3, category: "Promos" },
+        { title: "P1", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: promo1, category: "Promos" },
+        { title: "P2", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo2, category: "Promos" },
+        { title: "P3", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: promo3, category: "Promos" },
     ];
 
     const filteredItems = menuItems
@@ -128,24 +128,24 @@ const Menu = () => {
     const styles = {
         pageContainer: {
             backgroundColor: '0A5C36',
-            padding: '30px 0',
+            padding: '1.875rem 0',
             minHeight: '100vh',
             color: '#FFD54F',
             textAlign: 'center',
         },
         categoryContainer: {
             backgroundColor: '#ffbd59',
-            borderRadius: '50px',
-            padding: '10px 0',
+            borderRadius: '3rem',
+            // padding: '.5rem',
             margin: '0 auto',
-            width: '90%', // Adjusted width for mobile
+            width: '100%', // Adjusted width for mobile
             display: 'flex',
             justifyContent: 'center',
-            marginBottom: '20px',
-            marginTop: '20px',
-            maxWidth: '1200px',
+            marginBottom: '1.25rem',
+            marginTop: '1.25rem',
+            maxWidth: '75rem',
             flexWrap: 'wrap',
-            gap: '10px', // Added gap for spacing between items
+            // gap: '.5rem', // Added gap for spacing between items
         },
         categoryButton: {
             backgroundColor: 'transparent',
@@ -153,18 +153,20 @@ const Menu = () => {
             border: 'none',
             cursor: 'pointer',
             padding: '10px 20px',
-            fontSize: '1em',
-            fontWeight: 'bold',
+            fontSize: '1.2rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 700, 
+            fontStyle: 'bold', 
             borderRadius: '30px',
-            transition: 'background-color 0.3s ease',
-            margin: '5px', // Added margin for spacing
+            transition: 'background-color 0.3s ease-in-out',
+            margin: '1rem', // Added margin for spacing
         },
         activeCategoryButton: {
-            backgroundColor: '#4E342E',
-            color: '#FFD54F',
+            backgroundColor: '#783F1D',
+            color: 'white',
         },
         dropdownToggle: {
-            backgroundColor: '#FFD54F',
+            backgroundColor: '#ffbd59',
             color: '#4E342E',
             border: 'none',
             borderRadius: '30px',
@@ -172,12 +174,20 @@ const Menu = () => {
             marginBottom:'20px',
             marginTop:'20px',
             width: '200px',
+            fontSize: '1.2rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 700, 
+            fontStyle: 'bold', 
         },
         dropdownMenu: {
-            backgroundColor: '#FFD54F',
-            border: '2px solid #4E342E',
-            borderRadius: '10px',
+            backgroundColor: '#ffbd59',
+            border: '2px solid #783F1D',
+            borderRadius: '1.5rem',
             width:'200px',
+            fontSize: '1.2rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 700, 
+            fontStyle: 'bold', 
         },
         dropdownItem: {
             color: '#4E342E',
@@ -185,20 +195,29 @@ const Menu = () => {
         },
         dropdownItemActive: {
             backgroundColor: '#4E342E',
-            color: '#FFD54F',
+            color: 'white',
         },
         menuItem: {
             position: 'relative',
             backgroundColor: '#ffbd59',
-            border: '2px solid #4E342E',
-            borderRadius: '10px',
+            border: '.15rem solid #4E342E',
             padding: '15px',
             textAlign: 'center',
+            justifyContent: 'center',
             transition: 'transform 0.3s ease',
             color: '#4E342E',
             cursor: 'pointer',
+            width: '100%',
+            height: '95%', 
+            maxWidth: '27rem',
+            maxHeight: '27rem', 
             marginBottom: '30px',
             borderRadius:'30px',
+            overflow: 'hidden',
+            '&:hover': {
+                transform: 'scale(1.05)',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+            }
         },
  
         priceTagImage: {
@@ -209,20 +228,36 @@ const Menu = () => {
             height: '150px', // Adjust size as needed
         },
         menuItemImage: {
-            width: '350px',
-            height: '200px',
-            borderRadius: '30px',
+            width: '100%',
+            height: '70%',
+            maxHeight: '15rem',
+            borderRadius: '1.2rem',
             marginBottom: '10px',
+            border: '.15rem solid #4E342E',
+            objectFit: 'cover',
+            display: 'block',
         },
         menuItemTitle: {
             fontWeight: 'bold',
             marginTop: '10px',
-            fontSize: '3em',
-            color: '#ae3740'
+            fontSize: '2rem',
+            color: 'black',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 700, 
+            fontStyle: 'bold', 
+            textOverflow: 'ellipsis', // Add ellipsis to overflow text
+        overflow: 'hidden', // Hide overflow text
+        whiteSpace: 'nowrap', // Prevent text from wrapping
         },
         menuItemDescription: {
-            color: '#ae3740',
-            fontSize: '2.5em',
+            color: 'black',
+            fontSize: '1.35rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 100, 
+            fontStyle: 'normal',
+            textOverflow: 'ellipsis', // Add ellipsis to overflow text
+        overflow: 'hidden', // Hide overflow text
+        whiteSpace: 'nowrap', // Prevent text from wrapping 
         },
         menuItemPrice: {
             color: '#C62828',
@@ -320,10 +355,16 @@ const Menu = () => {
                     placeholder="Search menu..."
                     style={{
                         ...styles.searchInput,
-                        paddingLeft: '40px', // Adjust this value to increase or decrease the spacing
+                        paddingLeft: '3rem',
+                        fontFamily: '"Itim", cursive', 
+                        fontWeight: 700, 
+                        fontStyle: 'bold',
+                        fontSize: '1.2rem',
+                        maxWidth: '80%',
                     }}
                     value={searchTerm}
-                    onChange={handleSearchChange} />
+                    onChange={handleSearchChange}
+                    className='menusearchbar'/>
 
                 {isMobile ? (
                     <Dropdown>
