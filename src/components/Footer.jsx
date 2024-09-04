@@ -1,5 +1,6 @@
 import React from 'react';
-import './Footer.css'; // Make sure to link your CSS file
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -7,42 +8,29 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section logo-section">
           <img src="logo.png" alt="Logo" />
-          <p>(Gab's Chicken Information --- Pa edit nalang ng want niyo here).</p>
         </div>
-        <div className="footer-section">
-          <h4>About Us</h4>
+        <div className="footer-section contact-us">
+          <h4>Contact Us</h4>
           <ul>
-            <li><a href="#">Company Information</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li>The Shoppes at Infinity, Brgy. Pulung Maragul, Angeles City, Philippines</li>
+            <li>Email: gabschickeninasal@gmail.com</li>
+            <li>Phone: 0966 163 7748</li>
           </ul>
         </div>
-        <div className="footer-section">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h4>Subscribe</h4>
-          <form className="subscribe-form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-        <div className="footer-section social-icons">
-          <a href="https://www.facebook.com/Gabs.ChickenInasal" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/gabs.chickeninasal" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
+        <div className="footer-section follow-us">
+          <h4>Follow Us</h4>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/Gabs.ChickenInasal" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF />
+            </a>
+            <a href="https://www.instagram.com/gabs.chickeninasal/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Gab's Chicken Inasal. All rights reserved.</p>
+        &copy; 2024 Gabs Chicken Inasal. All rights reserved.
       </div>
     </footer>
   );
