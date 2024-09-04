@@ -2,12 +2,14 @@ import React from 'react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
+import gablogo from '../img/gablogo.png'
+
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section logo-section">
-          <img src="logo.png" alt="Logo" />
+          <img src={gablogo} alt="Logo" id='footerimg' />
         </div>
         <div className="footer-section contact-us">
           <h4>Contact Us</h4>

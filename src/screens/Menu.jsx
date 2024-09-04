@@ -36,6 +36,8 @@ import promo1 from '../img/promo1.png';
 import promo2 from '../img/promo2.png';
 import promo3 from '../img/promo3.png';
 
+import './Menu.css'
+
 
 const Menu = () => {
     const categories = ["All", "Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos"];
@@ -282,9 +284,9 @@ const Menu = () => {
             top: '60%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: '#FFD54F',
-            border: '2px solid #4E342E',
-            borderRadius: '10px',
+            backgroundColor: '#ffbd59',
+            border: '.15rem solid #4E342E',
+            borderRadius: '2rem',
             padding: '30px',
             zIndex: 1000,
             boxShadow: '0 0 15px rgba(0, 0, 0, 0.3)',
@@ -296,18 +298,25 @@ const Menu = () => {
             position: 'relative', // Ensure close button can be positioned absolutely
         },
         popupImage: {
-            width: '500px',
-            height: '300px',
-            borderRadius: '30px',
+            width: '100%',
+            height: '90%',
+            maxHeight: '20rem',
+            borderRadius: '1.2rem',
         },
         popupTitle: {
-            fontSize: '2em',
-            fontWeight: 'bold',
             marginTop: '15px',
+            fontSize: '2.5rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 700, 
+            fontStyle: 'bold', 
+            color: 'black',
         },
         popupDescription: {
-            fontSize: '2.2em',
-            color: '#4E342E',
+            fontSize: '1.5rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 400, 
+            fontStyle: 'bold', 
+            color: 'black',
             marginTop: '10px',
         },
         popupPrice: {
@@ -318,10 +327,10 @@ const Menu = () => {
         },
         closeButton: {
             color: 'red',
-            fontSize: '24px',
+            fontSize: '3rem',
             position: 'absolute',
-            top: '10px',
-            right: '10px',
+            top: '-21px',
+            right: '5px',
             cursor: 'pointer',
         },
         carouselContainer: {
@@ -369,6 +378,8 @@ const Menu = () => {
                                     key={index}
                                     style={activeCategory === category ? styles.dropdownItemActive : styles.dropdownItem}
                                     onClick={() => setActiveCategory(category)}
+
+                                    className='categorydditem'
                                 >
                                     {category}
                                 </Dropdown.Item>
@@ -376,7 +387,7 @@ const Menu = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 ) : (
-                    <div style={styles.categoryContainer}>
+                    <div style={styles.categoryContainer} >
                         {categories.map((category, index) => (
                             <Button
                                 key={index}
@@ -421,6 +432,7 @@ const Menu = () => {
                             <div
                                 style={styles.menuItem}
                                 onClick={() => handleItemClick(item)}
+                                className='menucard'
                             >
                                 <img
                                     src={item.image}

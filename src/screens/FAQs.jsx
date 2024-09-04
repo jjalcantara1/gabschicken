@@ -96,6 +96,7 @@ const FAQs = () => {
           </Col>
         </Row>
       </Container>
+      <br/>
     </>
   );
 };
