@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Footer from './components/Footer';
 import './components/Footer.css';
+import FAQs from './screens/FAQs';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faqs" element={<FAQs />} /> {/* Add this line */}
+
         </Routes>
 
         <Footer />
