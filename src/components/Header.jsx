@@ -45,7 +45,7 @@ function Header() {
             <Nav.Link as={Link} to="/" onClick={scrollToTop} id="home">Home</Nav.Link>
             <Nav.Link as={Link} to="/menu" id="menu" onClick={scrollToTop}>Menu</Nav.Link>
             <Nav.Link as={Link} to="/contact" onClick={scrollToTop} id="contactus">Contact Us</Nav.Link>
-            <Nav.Link as={Link} to="/faqs" onClick={scrollToTop} id="faqs">FAQs</Nav.Link>
+            <Nav.Link as={Link} to="/faqs" onClick={scrollToTop} id="faqs">FAQS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
