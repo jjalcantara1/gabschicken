@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.faq-container {
+    margin-top: 80px; /* Add top margin to avoid header overlap */
+    padding-bottom: 50px; /* Extra space to avoid footer overlap */
+  }
+  .faq-image {
+    max-width: 100%;
+    height: auto;
+    border: 2rem solid #ffbd59; /* Example border color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 10px 10px 0px -1px #ffbd5b83;
+  }
+  .faq-answer {
+    text-align: left;
+    padding-left: 3rem !important; /* Force padding */
+}
+.faq-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 0 10px; /* Space between columns */
+  }
+  
+  .column p {
+    margin: 0;
+  }
+  .faq-title {
+   
+        font-size: 3rem;
+        margin-right: 4rem;
+        margin-left: 4rem;
+        margin-bottom: 3.5rem;
+        color: #FFBD59;
+        font-family: "Lobster", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-shadow: 4px 4px 0px #04371F,  
+        6px 6px 0px #ff5757,  
+        8px 8px 0px #ff5757;  
+      }  
+ /* Container for FAQ questions */
+.faq-question-card {
+    background-color: #FFECB3; /* Light yellow shade for default */
+    border: 1px solid #FFBD59; /* Border color matching the title */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    margin-bottom: 1rem; /* Space between cards */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Hover state for the FAQ question card */
+  .faq-question-card:hover {
+    background-color: #FAD180; /* Light red or pinkish color on hover */
+  }
+  
+  /* Button inside FAQ card */
+  .faq-question-button {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #634a18; /* Text color matching the title */
+    padding: 1rem; /* Padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F2D7; /* Light background color */
+    border: none; /* Remove default button border */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+  }
+  
+  /* Hover state for the FAQ question button */
+  .faq-question-button:hover {
+    color: #7C5C1E; /* Maintain text color on hover */
+    background-color: #F9ECC1; /* Slightly lighter yellow on hover */
+  }
+  
+  /* Active state for the FAQ question button */
+  .faq-question-button:active {
+    background-color: #F5F2D7; /* Ensure background color matches default color on click */
+    color: #7C5C1E; /* Maintain text color on click */
+  }
+  
+  /* Focus state to remove default focus outline */
+  .faq-question-button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+    
+  /* Padding for the answer text */
+  .faq-answer {
+    padding-left: 20px; /* Padding for the answer text */
+    text-align: left;
+    color: #382a0d; /* Text color matching the title */
+  }
+  
