@@ -447,9 +447,9 @@ const Menu = () => {
                 </Row>
 
                 {showPopup && selectedItem && (
-                    <div style={styles.popupOverlay} onClick={handleClosePopup}>
-                        <div style={styles.popup} onClick={e => e.stopPropagation()}>
-                            <span style={styles.closeButton} onClick={handleClosePopup}>
+                    <div style={styles.popupOverlay} onClick={handleClosePopup} className='popupoverlay'>
+                        <div style={styles.popup} onClick={e => e.stopPropagation()} className='menupopup'>
+                            <span style={styles.closeButton} onClick={handleClosePopup} className='popupclose'>
                                 &times;
                             </span>
                             <img

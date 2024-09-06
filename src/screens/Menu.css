@@ -111,3 +111,135 @@
   color: black;
   border-radius: 1rem;
 }
+.popupoverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menupopup{
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffbd59;
+  border: .15rem solid #4E342E;
+  border-radius: 2rem;
+  padding: 30px;
+  z-index: 1000;
+  box-shadow: '0 0 15px rgba(0, 0, 0, 0.3)';
+  width: 100%; 
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: auto; 
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menupopup::-webkit-scrollbar {
+  display: none;
+}
+
+.menupopup {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+@media (max-width: 1200px) { 
+  .menupopup{
+    width: 90% !important;
+    height: auto !important;
+    /* margin-bottom: 3rem;
+    margin-right: 3rem; */
+  }
+}
+
+@media (max-width: 1200px) { 
+  .menupopup h2{
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .menupopup p{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .menupopup img{
+    width: 85% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .menupopup span{
+    font-size: 2rem !important;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/*  */
+
+@media (max-width: 991px) { 
+  .menupopup{
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 991px) { 
+  .menupopup h2{
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 991px) { 
+  .menupopup p{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 991px) { 
+  .menupopup img{
+    width: 85% !important;
+    height: auto !important;
+  }
+}
+
+
+
+/*  */
+
+/* @media (max-width: 590px) { 
+  .menupopup{
+    width: 50% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 590px) { 
+  .menupopup h2{
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 590px) { 
+  .menupopup p{
+    font-size: .7rem !important;
+  }
+}
+
+@media (max-width: 590px) { 
+  .menupopup img{
+    width: 70% !important;
+    height: auto !important;
+  }
+} */
