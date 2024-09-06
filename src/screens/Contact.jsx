@@ -114,7 +114,7 @@ const Contact = () => {
             <div style={{ marginBottom: '20px', paddingLeft: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5rem' }}>
                 <FaPhone style={{ marginRight: '15px', color: '#FFBD59'  }} />
-                <span style={{ color: 'white', fontFamily: '"Itim", sans-serif', fontWeight: '400', fontStyle: 'normal', color: '#FFBD59', textShadow: '2px 2px #04371F'  }}>+63966 163 7748 / +63925 357 1460</span>
+                <span style={{ color: 'white', fontFamily: '"Itim", sans-serif', fontWeight: '400', fontStyle: 'normal', color: '#FFBD59', textShadow: '2px 2px #04371F'  }}>0966 163 7748</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0', fontSize: '1.5em' }}>
                 <FaEnvelope style={{ marginRight: '15px', color: '#FFBD59' }} />

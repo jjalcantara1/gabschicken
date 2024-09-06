@@ -34,7 +34,7 @@ const FAQs = () => {
     },
     {
       question: "Can I place bulk or scheduled orders?",
-      answer: "Yes, you can contact us for bulk and scheduled orders at +639253571460.",
+      answer: "Yes, you can contact us for bulk and scheduled orders at 0966 163 7748.",
     },
     {
       question: "Do you accept cashless payments?",
