@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Dropdown, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Dropdown, Button, Form, Card } from 'react-bootstrap';
 import MenuCategory from '../components/MenuCategory';
 import MenuItem from '../components/MenuItem';
 import Header from '../components/Header';
@@ -40,7 +40,7 @@ import './Menu.css'
 
 
 const Menu = () => {
-    const categories = ["All", "Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos"];
+    const categories = ["All", "Appetizer", "Grilled", "Fried", "Combo", "Special", "Promos", "Drinks"];
     const [activeCategory, setActiveCategory] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [searchTerm, setSearchTerm] = useState('');
@@ -48,36 +48,36 @@ const Menu = () => {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const menuItems = [
-        { title: "A1", description: "Sisig Tokwa", price: "₱199", image: A1, category: "Appetizer" },
-        { title: "A2", description: "Calamares", price: "₱229", image: A2, category: "Appetizer" },
-        { title: "A3", description: "Pork Sisig", price: "₱299", image: A3, category: "Appetizer" },
-        { title: "A4", description: "Lechon Kawali", price: "₱279", image: A4, category: "Appetizer" },
-        { title: "A5", description: "Tokwa't Baboy", price: "₱319", image: A5, category: "Appetizer" },
-        { title: "A6", description: "Stuffed Pusit", price: "Price vary on size", image: A6, category: "Appetizer" },
-        { title: "G1", description: "Inasal Legs", price: "₱199", image: G1, category: "Grilled" },
-        { title: "G2", description: "Inasal Pecho", price: "₱199", image: G2, category: "Grilled" },
-        { title: "G3", description: "Pork Barbecue", price: "₱229", image: G3, category: "Grilled" },
-        { title: "G4", description: "Pork Belly", price: "₱249", image: G4, category: "Grilled" },
-        { title: "G5", description: "Pork Spareribs", price: "₱279", image: G5, category: "Grilled" },
-        { title: "G6", description: "T-Bone Steak", price: "₱289", image: G6, category: "Grilled" },
-        { title: "G7", description: "Stuffed Pusit", price: "Price vary on size", image: G7, category: "Grilled" },
-        { title: "F1", description: "Calamares", price: "₱188", image: F1, category: "Fried" },
-        { title: "F2", description: "Breaded Pork Chop", price: "₱198", image: F2, category: "Fried" },
-        { title: "F3", description: "Honey Glazed Chicken", price: "₱248", image: F3, category: "Fried" },
-        { title: "F4", description: "Chicken Ala Gab", price: "₱258", image: F4, category: "Fried" },
-        { title: "F5", description: "Chicken Cordon Bleu", price: "₱278", image: F5, category: "Fried" },
-        { title: "C1", description: "Inasal & Pork Barbecue", price: "₱268", image: C1, category: "Combo" },
-        { title: "C2", description: "Inasal & Pork Sisig", price: "₱278", image: C2, category: "Combo" },
-        { title: "C3", description: "Inasal & Pork Belly", price: "₱288", image: C3, category: "Combo" }, 
-        { title: "C4", description: "Bab's Super Meal", price: "₱328", image: C4, category: "Combo" },
-        { title: "S1", description: "Chopsuey", price: "₱248", image: S1, category: "Special" },
-        { title: "S2", description: "Beef Pares", price: "₱258", image: S2, category: "Special" },
-        { title: "S3", description: "Crispy Kare-Kare", price: "₱268", image: S3, category: "Special" },
-        { title: "S4", description: "Crispy Pata", price: "₱648", image: S4, category: "Special" },
-        { title: "S5", description: "Moroccan Chicken", price: "₱249", image: S5, category: "Special" },
-        { title: "P1", description: "Sisig Tokwa with 1 Bucket of Beers", price: "₱499", image: promo1, category: "Promos" },
-        { title: "P2", description: "Pork Sisig with 1 Bucket of Beers", price: "₱599", image: promo2, category: "Promos" },
-        { title: "P3", description: "Crispy Pata with 1 Bucket of Beers", price: "₱959", image: promo3, category: "Promos" },
+        { title: "A1", description: "Sisig Tokwa", detaildescription: "1 plate of sisig tokwa", price: "₱199", image: A1, category: "Appetizer" },
+        { title: "A2", description: "Calamares", detaildescription: "1 plate of calamares", price: "₱229", image: A2, category: "Appetizer" },
+        { title: "A3", description: "Pork Sisig", detaildescription: "1 plate of pork sisig", price: "₱299", image: A3, category: "Appetizer" },
+        { title: "A4", description: "Lechon Kawali", detaildescription: "1 plate of lechon kawali", price: "₱279", image: A4, category: "Appetizer" },
+        { title: "A5", description: "Tokwa't Baboy", detaildescription: "1 plate of tokwa't baboy", price: "₱319", image: A5, category: "Appetizer" },
+        { title: "A6", description: "Stuffed Pusit", detaildescription: "1 piece stuffed pusit", price: "Price vary on size", image: A6, category: "Appetizer" },
+        { title: "G1", description: "Inasal Legs", detaildescription: "1 piece chicken inasal legs with unlimited gab's rice and special drinks ", price: "₱199", image: G1, category: "Grilled" },
+        { title: "G2", description: "Inasal Pecho", detaildescription: "1 piece chicken inasal pecho with unlimited gab's rice and special drinks ", price: "₱199", image: G2, category: "Grilled" },
+        { title: "G3", description: "Pork Barbecue", detaildescription: "1 piece pork barbecue with unlimited gab's rice and special drinks ", price: "₱229", image: G3, category: "Grilled" },
+        { title: "G4", description: "Pork Belly", detaildescription: "1 piece pork belly with unlimited gab's rice and special drinks ", price: "₱249", image: G4, category: "Grilled" },
+        { title: "G5", description: "Pork Spareribs", detaildescription: "1 piece pork spareribs with unlimited gab's rice and special drinks ", price: "₱279", image: G5, category: "Grilled" },
+        { title: "G6", description: "T-Bone Steak", detaildescription: "1 piece t-bone steak with unlimited gab's rice and special drinks ", price: "₱289", image: G6, category: "Grilled" },
+        { title: "G7", description: "Stuffed Pusit", detaildescription: "1 piece stuffed pusit with unlimited gab's rice and special drinks ", price: "Price vary on size", image: G7, category: "Grilled" },
+        { title: "F1", description: "Calamares", detaildescription: "1 plate of calamares with unlimited gab's rice and special drinks", price: "₱188", image: F1, category: "Fried" },
+        { title: "F2", description: "Breaded Pork Chop", detaildescription: "1 piece breaded pork chop with unlimited gab's rice and special drinks", price: "₱198", image: F2, category: "Fried" },
+        { title: "F3", description: "Honey Glazed Chicken", detaildescription: "1 piece honey glazed chicken with unlimited gab's rice and special drinks", price: "₱248", image: F3, category: "Fried" },
+        { title: "F4", description: "Chicken Ala Gab", detaildescription: "1 piece chicken ala gab with unlimited gab's rice and special drinks", price: "₱258", image: F4, category: "Fried" },
+        { title: "F5", description: "Chicken Cordon Bleu", detaildescription: "1 chicken cordon bleu with unlimited gab's rice and special drinks", price: "₱278", image: F5, category: "Fried" },
+        { title: "C1", description: "Inasal & Pork Barbecue", detaildescription: "1 piece chicken inasal and pork barbecue with unlimited gab's rice and special drinks", price: "₱268", image: C1, category: "Combo" },
+        { title: "C2", description: "Inasal & Pork Sisig", detaildescription: "1  chicken inasal and pork sisig with unlimited gab's rice and special drinks", price: "₱278", image: C2, category: "Combo" },
+        { title: "C3", description: "Inasal & Pork Belly", detaildescription: "1 piece chicken inasal and pork belly with unlimited gab's rice and special drinks", price: "₱288", image: C3, category: "Combo" }, 
+        { title: "C4", description: "Gab's Super Meal", detaildescription: "1 plate of pork sisig, chicken inasal and pork barbecue with unlimited gab's rice and special drinks", price: "₱328", image: C4, category: "Combo" },
+        { title: "S1", description: "Chopsuey", detaildescription: "1 plate of chopsuey with unlimited gab's rice and special drinks", price: "₱248", image: S1, category: "Special" },
+        { title: "S2", description: "Beef Pares", price: "₱258", detaildescription: "1 bowl of beef pares with unlimited gab's rice and special drinks", image: S2, category: "Special" },
+        { title: "S3", description: "Crispy Kare-Kare", detaildescription: "1 bowl of crispy kare-kare with unlimited gab's rice and special drinks", price: "₱268", image: S3, category: "Special" },
+        { title: "S4", description: "Crispy Pata", detaildescription: "1 whole crispy pata with unlimited gab's rice and special drinks", price: "₱648", image: S4, category: "Special" },
+        { title: "S5", description: "Moroccan Chicken", detaildescription: "1 piece moroccan chicken with unlimited gab's rice and special drinks", price: "₱249", image: S5, category: "Special" },
+        { title: "P1", description: "Sisig Tokwa with 1 Bucket of Beers", detaildescription: "1 plate of sisig tokwa and 1 bucket of beers", price: "₱499", image: promo1, category: "Promos" },
+        { title: "P2", description: "Pork Sisig with 1 Bucket of Beers", detaildescription: "1 plate of pork sisig and 1 bucket of beers", price: "₱599", image: promo2, category: "Promos" },
+        { title: "P3", description: "Crispy Pata with 1 Bucket of Beers", detaildescription: "1 whole crispy pata and 1 bucket of beers", price: "₱959", image: promo3, category: "Promos" },
     ];
 
     const filteredItems = menuItems
@@ -205,11 +205,11 @@ const Menu = () => {
             position: 'absolute',
             top: 0,
             right: 0,
-            fontSize: '1.5em',
+            fontSize: '1.9em',
             fontWeight: 'bold',
             color: '#fff',
             lineHeight: '1.8',
-            paddingInline: '2em',
+            paddingInline: '2.3em',
             paddingBottom: '0.5em',
             backgroundColor: '#BD1550',
             borderImage: 'conic-gradient(#0008 0 0) 51%/0.5em',
@@ -219,7 +219,7 @@ const Menu = () => {
             whiteSpace: 'nowrap', 
             overflow: 'hidden', 
             textOverflow: 'ellipsis',  
-            maxWidth: '155px', 
+            maxWidth: '220px', 
         },
         menuItemImage: {
             width: '100%',
@@ -319,6 +319,14 @@ const Menu = () => {
             color: 'black',
             marginTop: '10px',
         },
+        popupDetailDescription: {
+            fontSize: '1.3rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 400, 
+            fontStyle: 'bold', 
+            color: 'black',
+            marginTop: '10px',
+        },
         popupPrice: {
             fontSize: '1.5em',
             color: '#C62828',
@@ -343,11 +351,56 @@ const Menu = () => {
             objectFit: 'cover',
             borderRadius:'30px',
         },
+        drinksContainer: {
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between', // Space evenly between cards
+            gap: '0px', // Gap between the cards
+            padding: '-5px',
+          },
+          drinksCard: {
+            position: 'relative',
+            backgroundColor: '#ffbd59',
+            border: '.15rem solid #4E342E',
+            padding: '10px',
+            textAlign: 'center',
+            justifyContent: 'center',
+            transition: 'transform 0.3s ease',
+            color: '#4E342E',
+            width: '100%',  // Adjust to 100% of the parent div (30%)
+            height: 'auto',
+            maxWidth: '27rem',
+            borderRadius: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+            },
+          },
+        drinksPriceTag: {
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            fontSize: '0.9em',
+            fontWeight: 'bold',
+            color: '#fff',
+            lineHeight: '1.6',
+            paddingInline: '2.2em',
+            paddingBottom: '0.5em',
+            backgroundColor: '#BD1550',
+            borderImage: 'conic-gradient(#0008 0 0) 51%/0.5em',
+            clipPath: 'polygon(100% calc(100% - 0.5em), 100% 100%, calc(100% - 0.5em) calc(100% - 0.5em), 0.5em calc(100% - 0.5em), 0 100%, 0 calc(100% - 0.5em), 999px calc(100% - 0.5em - 999px), calc(100% - 999px) calc(100% - 0.5em - 999px))',
+            transform: 'translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg)',
+            transformOrigin: '0% 100%',
+            whiteSpace: 'nowrap',
+        },
     };
     
 
     return (
         <><Header />
+        <h2 className="mb-4 menu-title">Menu</h2>
         
         <div style={styles.pageContainer}>
             <Container>
@@ -414,7 +467,7 @@ const Menu = () => {
                                             className="d-block w-100"
                                             src={item.image}
                                             alt={item.title}
-                                            style={styles.carouselImage} /* Apply styles to ensure uniform image size */ />
+                                            style={styles.carouselImage} />
                                         <Carousel.Caption>
                                             <h3>{item.title}</h3>
                                             <p>{item.description}</p>
@@ -446,6 +499,41 @@ const Menu = () => {
                     ))}
                 </Row>
 
+
+                {(activeCategory === "Drinks" || activeCategory === "All") && (
+    <div style={styles.drinksContainer}> {/* Use drinksContainer for layout */}
+        {[
+        { title: 'Soda', price: 30 },
+        { title: 'Bottled Water', price: 30 },
+        { title: 'Houseblend Iced Tea', price: 80 },
+        { title: 'Calamansi Juice', price: 80 },
+        { title: 'Buko in a Shell', price: 80 },
+        { title: 'San Miguel Apple', price: 75 },
+        { title: 'San Miguel Light', price: 75 },
+        { title: 'Pale Pilsen', price: 75 },
+        { title: 'Red Horse', price: 75 },
+        { title: 'Bucket', price: 400 },
+        { title: 'Assorted Bucket', price: 420 },
+        { title: 'Pitcher Iced Tea', price: 120 },
+        { title: 'Coke (1.5L)', price: 150 },
+        { title: 'Black Gulaman', price: 100 },
+        { title: 'Citrus Trio', price: 120 }
+        ].map((drink, index) => (
+        <div key={index} style={{ flexBasis: '32%', marginBottom: '20px' }}> {/* Adjust sizing to 30% to fit 3 cards */}
+            <Card style={styles.drinksCard}>
+                <div style={styles.drinksPriceTag}>
+                    ₱{drink.price}
+                </div>
+                <Card.Body>
+                    <Card.Title style={styles.drinksCardTitle}>
+                        {drink.title}
+                    </Card.Title>
+                </Card.Body>
+            </Card>
+        </div>
+        ))}
+    </div>
+)}
                 {showPopup && selectedItem && (
                     <div style={styles.popupOverlay} onClick={handleClosePopup} className='popupoverlay'>
                         <div style={styles.popup} onClick={e => e.stopPropagation()} className='menupopup'>
@@ -458,6 +546,7 @@ const Menu = () => {
                                 style={styles.popupImage} />
                             <h2 style={styles.popupTitle}>{selectedItem.title}</h2>
                             <p style={styles.popupDescription}>{selectedItem.description}</p>
+                            <p style={styles.popupDetailDescription}>{selectedItem.detaildescription}</p>
                             <p style={styles.popupPrice}>{selectedItem.price}</p>
                         </div>
                     </div>

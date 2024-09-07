@@ -1,3 +1,19 @@
+.menu-title {
+   
+  font-size: 6rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem !important;
+  color: #FFBD59;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 4px 4px 0px #04371F,  
+  6px 6px 0px #ff5757,  
+  8px 8px 0px #ff5757;  
+}  
+
 .menu-container {
     width: 100%;
     padding: 20px;
@@ -212,6 +228,14 @@
     width: 85% !important;
     height: auto !important;
   }
+}
+
+.drinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
 }
 
 
