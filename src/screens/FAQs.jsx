@@ -37,8 +37,12 @@ const FAQs = () => {
       answer: "Yes, you can contact us for bulk and scheduled orders at 0966 163 7748.",
     },
     {
-      question: "Do you accept cashless payments?",
-      answer: "Yes, we accept cashless payments via GCash.",
+      question: "Do you serve alcoholic beverages?",
+      answer: "Yes, see our menu for the available options.",
+    },
+    {
+      question: "Are pets allowed?",
+      answer: "Yes",
     },
   ];
 
