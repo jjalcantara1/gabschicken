@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import Header from '../components/Header';
 import { FaInstagram, FaFacebook, FaLink, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
@@ -13,6 +13,16 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+
+  const handleResize = () => {
+    setIsMobileView(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -92,17 +102,18 @@ const Contact = () => {
 
         <h1 className='contact-form-title'>Send us a Message!</h1>
 
-         {/* Contact Form and Google Maps Section */}
-         <div style={{
+        {/* Contact Form and Google Maps Section */}
+        <div style={{
           display: 'flex',
           width: '80%',
           justifyContent: 'space-between',
           marginTop: '40px',
-          flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+          flexDirection: isMobileView ? 'column' : 'row',
         }}>
           <div style={{
-            width: '50%',
-            paddingRight: '20px',
+            width: isMobileView ? '100%' : '50%',
+            paddingRight: isMobileView ? '0' : '20px',
+            marginBottom: isMobileView ? '20px' : '0',
           }}>
             <iframe
               title="Google Maps Location"
@@ -114,11 +125,10 @@ const Contact = () => {
             />
           </div>
           <div style={{
-            width: '70%',
-            backgroundColor: '#783e1dcb', // Semi-transparent white background
+            width: isMobileView ? '100%' : '70%',
+            backgroundColor: '#783e1dcb',
             padding: '20px',
             borderRadius: '2rem',
-            // border: '2px solid #783F1D'
           }}>
             <form onSubmit={sendMail}>
               <div style={{ marginBottom: '15px' }}>
@@ -162,13 +172,18 @@ const Contact = () => {
                 color: 'black',
                 padding: '10px 20px',
                 border: 'none',
-                borderRadius: '2rem',
+                borderRadius: '1.5rem',
                 cursor: 'pointer',
-                fontSize: '1.2em',
                 fontFamily: '"Itim", sans-serif',
                 fontWeight: '700',
                 fontStyle: 'normal',
-              }}>Send Message</button>
+                fontSize: '1.2rem',
+                
+                width: '100%',
+                transition: 'background-color 0.3s',
+              }}>
+                Send Message
+              </button>
             </form>
           </div>
         </div>
