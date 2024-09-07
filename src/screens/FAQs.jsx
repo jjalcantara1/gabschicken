@@ -40,10 +40,8 @@ const FAQs = () => {
       question: "Do you serve alcoholic beverages?",
       answer: "Yes, see our menu for the available options.",
     },
-    {
-      question: "Are pets allowed?",
-      answer: "Yes",
-    },
+   
+
   ];
 
   // Handle card toggle
