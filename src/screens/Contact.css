@@ -1,0 +1,174 @@
+.contact-container {
+    background-color: #0a5c36;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact-form-title {
+    font-size: 4rem;
+    font-weight: bold; /* Note: this will be overridden by the later 'font-weight: 700' */
+    text-shadow: 4px 4px #04371F, 6px 6px #ff5757;
+    margin-top: 3rem;
+    color: #FFBD59;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: 700; /* This overrides the previous 'font-weight: bold' */
+    font-style: normal;
+    display: flex; /* If you want to center it vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  
+  .contact-aside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  .contact-image-wrapper,
+  .contact-image-wrapper-small {
+    position: relative;
+    width: fit-content;
+    border-radius: 50%;
+    box-shadow: -4px -4px 0px 5px #FFBD59;
+    z-index: 1;
+  }
+  
+  .contact-image-wrapper-small {
+    margin-top: -100px;
+    margin-left: 120px;
+    z-index: 2;
+  }
+  
+  .contact-image-large,
+  .contact-image-small {
+    border-radius: 50%;
+    max-width: 18rem; /* Adjust sizes as needed */
+    margin: auto;
+  }
+  
+  .contact-image-small {
+    max-width: 17rem; /* Smaller image size */
+  }
+  
+  .contact-info {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .contact-title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 4px 4px #04371F, 6px 6px #ff5757;
+    margin-bottom: 30px;
+    color: #FFBD59;
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .contact-details {
+    margin-bottom: 20px;
+    padding-left: 2rem;
+  }
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  .contact-icon {
+    margin-right: 15px;
+    color: #FFBD59;
+  }
+  
+  .contact-detail span, 
+  .contact-detail a {
+    color: #FFBD59;
+    text-shadow: 2px 2px #04371F;
+    font-family: 'Itim', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  .contact-detail a:hover {
+    color: #fca400;
+  }
+  
+  .contact-divider {
+    margin-top: 3rem;
+    border-bottom: 0.23rem dotted #FFBD59;
+    width: 85%;
+  }
+  
+  .contact-form-title {
+    font-size: 2.5rem;
+    color: #FFBD59;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 2rem;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-map,
+  .contact-form {
+    flex: 1;
+    min-width: 300px; /* Minimum width for smaller screens */
+    max-width: 500px; /* Maximum width for consistency */
+    width: 100%; /* Ensure they both use full width */
+  }
+  
+  .contact-iframe {
+    width: 100%;
+    height: 300px;
+    border: 3px solid #FFBD59;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    background-color: #FFBD59;
+    color: #0a5c36;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .send-button:hover {
+    background-color: #fca400;
+  }
+  
