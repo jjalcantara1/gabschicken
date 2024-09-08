@@ -417,7 +417,7 @@
   } */
   
   .section2container h1{
-    font-size: 5.6rem;
+    font-size: 4.9rem;
     margin-bottom: 3.5rem;
     color: #FFBD59;
     font-family: "Lobster", sans-serif;
@@ -429,7 +429,7 @@
   } 
   
   .section2container p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #FFBD59;
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -485,8 +485,8 @@
 
 .section2imagedesign2 {
   position: absolute;
-  top: 60%;
-  left: 52%;
+  top: 65%;
+  left: 50%;
   width: 70%; 
   height: auto;
   z-index: 3;
@@ -759,7 +759,7 @@
   }
   
   .text-content h1 {
-    font-size: 5.6rem;
+    font-size: 5rem;
     margin-right: 4rem;
     margin-left: 4rem;
     margin-bottom: 3.5rem;

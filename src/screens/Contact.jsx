@@ -122,6 +122,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              id="nearestlocation"
             />
           </div>
           <div style={{
@@ -167,7 +168,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button type="submit" style={{
+              <button className='contactbtn' type="submit" style={{
                 backgroundColor: '#FFBD59',
                 color: 'black',
                 padding: '10px 20px',
