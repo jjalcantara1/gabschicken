@@ -395,6 +395,13 @@ const Menu = () => {
             transformOrigin: '0% 100%',
             whiteSpace: 'nowrap',
         },
+        drinksCardTitle:{
+            color: 'black',
+            fontSize: '1.35rem',
+            fontFamily: '"Itim", cursive', 
+            fontWeight: 100, 
+            fontStyle: 'normal'
+        }
     };
     
 
@@ -501,7 +508,7 @@ const Menu = () => {
 
 
                 {(activeCategory === "Drinks" || activeCategory === "All") && (
-    <div style={styles.drinksContainer}> {/* Use drinksContainer for layout */}
+    <div style={styles.drinksContainer}>
         {[
         { title: 'Soda', price: 30 },
         { title: 'Bottled Water', price: 30 },
