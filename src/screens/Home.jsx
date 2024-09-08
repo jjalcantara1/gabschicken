@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 import wow1 from '../img/wow1.png'
 import wow2 from '../img/wow2.png'
 import section3bg from '../img/section3bg.png'
+import contact2 from '../img/contact2.jpg'
+import gablocation from '../img/gablocation.jpg'
+import gabsiginasal from '../img/gabsiginasal.jpg'
+import gabpares from '../img/gabpares.jpg'
+import gabkalamares from '../img/gabkalamares.jpg'
 
 const carouselData = [
-  { id: 1, title: "Gab's Signature Chicken Inasal", description: "A Filipino classic, Chicken Adobo is a savory and tangy dish where tender chicken pieces are marinated and simmered in a rich blend of soy sauce, vinegar, garlic, and bay leaves. The result is a flavorful dish with a perfect balance of salty, sour, and umami notes, making it an irresistible comfort food.", imgSrc: 'https://pbs.twimg.com/media/FxPiQ9TX0AECxuY.jpg' },
-  { id: 2, title: "Special Crispy Pork Kare-kare", description: "Kare-Kare is a traditional Filipino stew known for its rich, creamy peanut sauce. This hearty dish features oxtail, tripe, and a medley of vegetables, including eggplant, green beans, and banana blossoms. The velvety sauce, thickened with ground peanuts and annatto seeds, is complemented by the bold, salty kick of bagoong (fermented shrimp paste) on the side.", imgSrc: 'https://i.pinimg.com/736x/dd/18/b3/dd18b311f3ceaa8579f5c420ead9b4a1.jpg' },
-  { id: 3, title: "Gab's Special Halo-Halo", description: "Halo-Halo is a vibrant Filipino dessert that offers a refreshing mix of flavors and textures. A delightful combination of shaved ice, sweetened fruits, jelly, beans, and leche flan is crowned with ube ice cream and drizzled with evaporated milk. Each spoonful is a colorful and satisfying explosion of sweetness, perfect for cooling down on a hot day.", imgSrc: 'https://preview.redd.it/an7kwmy7hba61.jpg?width=640&crop=smart&auto=webp&s=e9e5cff6578cf46e83b3f02603f1d85d3c2e3d06' },
+  { id: 1, title: "Gab's Signature Chicken Inasal", description: "Gab's Signature Chicken Inasal is a mouthwatering Filipino grilled chicken, marinated in a special blend of spices and grilled to perfection. Juicy, flavorful, and uniquely satisfying, it's a dish that brings comfort and delight in every bite.", image: gabsiginasal  },
+  { id: 2, title: "Gab's Savory Beef Pares", description: "Gab's Savory Beef Pares is a Filipino classic featuring tender beef simmered in a rich, flavorful sauce, perfectly balanced with sweet and savory notes. Served with garlic rice, it's a comforting and hearty dish that brings warmth and satisfaction to every bite.", image: gabpares },
+  { id: 3, title: "Gab's Fried Calamares", description: "Gab's Fried Calamares features tender squid rings, lightly breaded and fried to golden perfection, served with a side of steamed rice. This satisfying dish combines crispy textures with savory flavors, making it a hearty and delicious seafood meal that's perfect for any occasion.", image: gabkalamares },
   // Add more slides as needed
 ];
 
@@ -22,6 +28,10 @@ const Home = () => {
 
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + carouselData.length) % carouselData.length);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -45,9 +55,11 @@ const Home = () => {
                   <div className="text">
                     <h1>{item.title}</h1>
                     <p>{item.description}</p>
+                    <Link to={"/menu"} onClick={scrollToTop}>
                     <button className='carouselbutton'>Check It Out!</button>
+                    </Link>
                   </div>
-                  <img src={item.imgSrc} alt={item.title} />
+                  <img src={item.image} alt={item.title}/>
                 </div>
               ))}
             </div>
@@ -58,7 +70,9 @@ const Home = () => {
       
         <div className='carouselend'>
         <h1 className='carouselendtext'>100% Delicious, 100% Worth Every Bite</h1>
-        <button className='carouselendbutton'>View full menu</button>
+        <Link to={"/menu"} onClick={scrollToTop}>
+        <button className='carouselendbutton' >View full menu</button>
+        </Link>
         </div>
 
       <div className='linecolor'>
@@ -70,7 +84,7 @@ const Home = () => {
 
           <div className='image-container'>
             <div>
-              <img className='section2image' src={'https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-6/418936971_863674885455954_5653540081634286195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE4UCrmaXEnwtvuOyPM95A-ergXL68SRQ16uBcvrxJFDXSnIxwvNMPnM4CDPwrHWKLlEitxvANSNlL7sBcQ_3br&_nc_ohc=c4-IHCqMrGMQ7kNvgEjKS7v&_nc_ht=scontent.fcrk1-2.fna&oh=00_AYDPu5lielI8OuqV0EUZPoEGC8p7nocIVekWQuYxNxpmKw&oe=66D27706'} />
+              <img className='section2image' src={gablocation} />
             </div>
             <img className='section2imagedesign1' alt='wow' src={wow1} />
             <div>
@@ -83,9 +97,11 @@ const Home = () => {
           </div>
 
           <div>
-            <h1>Sample text about place</h1>
-            <p>sample description about place</p>
+            <h1>Where taste meets comfort.</h1>
+            <p>Enjoy a cozy atmosphere and delicious food, where every meal feels like a comforting treat. Perfect for relaxing and savoring good flavors.</p>
+            <Link to={"/contact"}>
             <button className='section2button'>Find Nearest Location</button>
+            </Link> 
           </div>
 
         </div>
@@ -96,23 +112,27 @@ const Home = () => {
       
       <div className='section2endbg' style={{backgroundImage:`url(${section3bg})`}}>
       <div className='section2end'>
-        <h1 className='section2endtext'>Smthn abt questions then button for FAQs</h1>
+        <h1 className='section2endtext'>Have any questions? Head to the FAQs</h1>
+        <Link to={"/faqs"} onClick={scrollToTop}>
         <button className='section2button2'>Go to FAQs</button>
+        </Link>
       </div>
       </div>
 
       <div className="section3" style={{backgroundImage:`url(${section3bg})`}}>
 
       <div className="text-content">
-        <h1>Something about us smthn yeayeayea</h1>
-        <p>Small description about what the place is about. i havent tried it yet pero dapat video ung nasa here ----&gt; </p>
-        <button className="section3button">About Us</button>
+        <h1>Get in touch — where comfort and great food await!</h1>
+        <p>Have a question or craving? Contact us and experience a place where comfort and delicious food come together. We're here to make your visit special!</p>
+        <Link to={"/contact"} onClick={scrollToTop}>
+        <button className="section3button">Contact Us</button>
+        </Link>
       </div>
 
         <div className="image-container2">
           <img
             className="section3image"
-            src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-6/418936971_863674885455954_5653540081634286195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE4UCrmaXEnwtvuOyPM95A-ergXL68SRQ16uBcvrxJFDXSnIxwvNMPnM4CDPwrHWKLlEitxvANSNlL7sBcQ_3br&_nc_ohc=c4-IHCqMrGMQ7kNvgEjKS7v&_nc_ht=scontent.fcrk1-2.fna&oh=00_AYDPu5lielI8OuqV0EUZPoEGC8p7nocIVekWQuYxNxpmKw&oe=66D27706"
+            src={contact2}
             alt="Sample place image"
           />
       </div>
